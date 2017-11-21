@@ -1,0 +1,76 @@
+<!doctype html>
+  <html>
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta charset="utf-8">
+      <title>SQIP - pronounced /skwɪb/ - Scalable Quality Image Placeholder </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+      <style type="text/css">
+
+        html, body {
+          margin: 0;
+          padding: 0;
+        }
+
+        body {
+          padding: 12px;
+        }
+
+        li {
+          margin-bottom: 12px;
+        }
+
+        /* Set up a Passe-Partout frame around the image to cut away feathered blurry edges */
+        .container {
+          position: relative;
+          width: 658px; /* original dimensions of the image */
+          height: 370px;
+          overflow: hidden;
+        }
+
+        .container img {
+          position: absolute;
+          left: 0;
+          /* reposition the image to nullify the feathered blur */
+          -webkit-filter: blur(8px);
+          filter: blur(8px);
+          width: 682px;
+          height: 394px;
+          margin-left: -12px;
+          margin-top: -12px;
+        }
+
+        /* remove blur from final high res raster images after it's loaded */
+        .container img.lazyloaded {
+          -webkit-filter: blur(0);
+          filter: blur(0);
+        }
+
+      </style>
+
+      <script src="lazysizes.min.js" async=""></script>
+
+  	</head>
+
+  	<body>
+
+    <h1>SQIP - pronounced /skwɪb/ - Scalable Quality Image Placeholder</h1>
+
+      <div class="container">
+        <img src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="370" shape-rendering="geometricPrecision" width="658"><g stroke-linejoin="bevel"><path d="M736 192c11 41.8 22 83.6 33.1 125 50 6 101 11 151 17V0h-59c-42 63.8-83 128-125 192z" stroke="#2b2316" fill="#2b2316"/><path d="M225 97c1.98 74.8 3.96 150 5.95 224 71.4 5.89 143 11.8 214 17.7 28.7-68.3 57.3-137 86-205-1.39-17.3-19.8-11.5-32.1-14-91-7-183-15-274-23z" stroke="#d3b8af" fill="#d3b8af"/><path d="M0 232c73.8 32.6 148 65.3 221 97.9 14.9-7.43 7.25-24.6 8.52-37.9-2-66-2-132-6-197l-42-95h-182v232z" stroke="#714b27" fill="#714b27"/><path d="M488 390c.307 41.9.614 83.8.92 126h258c-6.18-47.8-12.4-95.6-18.5-143-80 5.93-160 11.9-240 17.8z" stroke="#41403e" fill="#41403e"/><path d="M728 372c6.18 47.8 12.4 95.6 18.5 143h174V334c-50.3-5.64-101-11.3-151-16.9-13.7 18.3-27.4 36.5-41.1 54.8z" stroke="#281f16" fill="#281f16"/><path d="M489 515c-.307-41.9-.614-83.8-.92-126-14.3-16.8-28.5-33.6-42.8-50.5-71.4-5.89-143-11.8-214-17.7-17.4 14.5-22.3 38.6-33.9 57.4-22.8 45.4-45.6 90.9-68.4 136h360z" stroke="#685d4b" fill="#685d4b"/><path d="M526 123c1.59 16.2 19.3 14.4 31.2 19.1 59.5 16.6 119 33.2 179 49.8 42-64 83-128 125-192h-330c-1.61 40.9-3.21 81.8-4.82 123z" stroke="#2d2113" fill="#2d2113"/><path d="M445 339c14.3 16.8 28.5 33.6 42.8 50.5 80-5.93 160-11.9 240-17.8 14-18 27-37 41-55-11-42-22-84-33-125-68-20-137-39-205-58-29 69-57 137-86 205z" stroke="#ad7661" fill="#ad7661"/><path d="M182 0c14.1 32.3 28.3 64.6 42.4 97 100 8.57 201 17.1 301 25.7 3-41.2 4-82.1 6-123h-349z" stroke="#262014" fill="#262014"/><path d="M128 515c31-62 62-123 93-185-73-33-147-65-221-98v283h128z" stroke="#7a522e" fill="#7a522e"/></g></svg>' data-src="squib-harry-potter-filch.jpg" class="lazyload" />
+      </div>
+
+      <p>
+        <h2>The "Why":</h2>
+        <ul>
+          <li>Gives users a faster experience by laying out the site with content resembling the final shapes and colors of images</li>
+          <li>Inlined SVG does not require base64 encoding to save the HTTP request of an LQIP image</li>
+          <li>The SVG is significantly smaller in byte size than a comparable LQIP image (1.6kb SVG vs. 7.0kb LQIP JPEG @q15 + full smoothing)</li>
+          <li>Up for discussion: unlike with LQIP, users will know the SQIP is a placeholder and won't be irritated by an LQIP image's high artifact count</li>
+          <li>Google is using single color boxes with the most dominant color present in an image to lay out the page before images are loaded. With SQIP, we can enhance this by making the placeholder resemble both dominant shapes and colors before the high resolution raster image replaces it.</li>
+        </ul>
+      </p>
+
+  	</body>
+</html>

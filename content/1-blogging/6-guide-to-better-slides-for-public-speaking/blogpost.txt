@@ -1,0 +1,51 @@
+Title: A Guide to Better Slides for Public Speaking
+
+----
+
+Date: 2016-07-15
+
+----
+
+Text: 
+
+I've been asked recently to review slide decks and to give advice on public speaking. Not being a professional speaker, I'm simply following a self-written guide. Today, I'm making this guide public so that it helps you give engaging & helpful talks.
+
+## The Guide
+
+1. Write down the high-level ideas: write the most important bit you want to convey to your audience first, then write down others. Stick to three bits or less.
+2. Break these high-level ideas down into chapters.
+3. Assign the following roles to these chapters:
+	* **Pain:** What is a shared pain that the audience acknowledges so that you can establish a problem that needs solving. Think of it as the antagonist of a story. You can only assign this role once.
+	* **Solution:** What is the high-level solution that solves the problem and relieves the pain? Think of it as the protagonist who is fighting the antagonist. You can only assign this role once, too.
+	* **Supporting Content:** Stories, anecdotes, data etc. that highlight the depth of the problem and the power of the solution. You may assign this role multiple times, ideally 2-3 times.
+	* **Personal Touch:** What is the emotionally engaging, human-relatable part? You may assign this role multiple times, though once will do.
+4. At this point, you should be comfortable in answering the following questions about your talk:
+	* Who is the intended audience?
+	* What should people take away from your talk?
+	* What about your talk is unique that should compel people to listen?
+	
+	If you find that you don’t have the answer to one of these questions or that your answers don’t go well together with the talk you want to give, start over.
+5. Fill your chapters with bullet-point notes about contents you intent to put into each one. Drill down several levels deep.
+6. Read through your outline again from top to bottom. Now try to think of an overarching storyline that incorporates the pain, solution and supporting elements and picks up on the personal touch. The storyline may simply be your own strive for the solution. It could also be a a reoccurring key element that guides the audience through the story, e.g. a metric measured after each chapter.
+7. Excluding the beginning and ending, pick a chapter with its bullet-point notes and create slides and speaker notes for it. A tip on speaker notes: while it makes sense to write them down and use them during your preparations, be aware that during the actual talk, you won't be able to rely on reading those notes at all.
+8. Repeat step no. 7 for all content chapters and only after everything else is done, create slides for the beginning and the ending.
+9. After creating slides for all chapters, read through the entire slide deck and during the process, answer the following questions:
+	* Is all information comprehensive so that people can follow up on it?
+	* Is each message I'm trying to convey as clear as can be?
+	* Can I re-order the contents to create a better story arch and keep the suspense?
+	* Which information is redundant and can be left out?
+	
+	Applying those questions, get busy making information comprehensive and yet conscise, simplify your wording and, above all, shorten and delete as much as possible. Slides are no place for prose.
+10. After pruning the slides, go through them yet again, this time thinking about dynamics and dramatic reading:
+	* At which points do you intent to make a pause for dramatic effect or to let something sink in? Add a marker into your speaker notes for this slide, e.g. "O-O-" for pausing by breathing in and out twice before moving on.
+	* Which slides are meant only as visual cues and are therefore quickly to move away from after they show up? Add another marker, e.g. "=>=>=>" to indicate switching to the next slide quickly.
+11. Now go to the ending of your slides and make sure you have clearly recognizable takeaways for your audience that match your intended high-level solution. The takeaways should be concise and consistent.
+12. Finally, ensure that you show a slide showing your contact info (name, email, social media handle), conference hash tag and URL to download your slide deck both at the beginning and at the end of your presentation. This slide should be the first slide when you begin and the very last slide visible when you finish.
+
+After your slide deck is complete and groomed, there only remains one thing to do: practice! I've given talks without dry-runs and got away with it, but each time I knew that my presentation could have been **that** much better. So take the time and practice - your audience will appreciate it.
+
+When practicing, start a timer to measure if you'll stay within the given time frame. I usually speed up by ~15% while on stage due to nerves. Your nervousness is something to take into account.
+
+Your amount of slides may also give you a good indicator as to how long your talk is going to be: I have an average pace of two slides per minute. So if, after grooming, my slide deck has ~80 slides, I can be confident to have the right amount of content for a 40 minute presentation.
+
+And that's it! I'm looking forward to your well-groomed slide decks. Thanks for caring and taking the time to make your audience's learning experience better. Give me feedback (link: https://twitter.com/tbaldauf text: via @tbaldauf) if you found this guide helpful or found things to improve.

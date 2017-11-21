@@ -1,0 +1,29 @@
+Title: To Boldly Monitor What No One Has Monitored Before
+
+----
+
+Text:
+
+In the (link: http://calendar.perfplanet.com/2012/using-nginx-php-fpmapc-and-varnish-to-make-wordpress-websites-fly/ text: Performance Advent Calendar I described) how to setup a high performance webserver. As a follow-up, let's look into monitoring this setup to automagically restart unresponsive services such as NGINX, PHP5-FPM and Varnish to minimize downtime.
+
+We'll be (link: http://mmonit.com/monit/ text: using Monit on Debian) because of its easy syntax. Go ahead and install Monit using your favorite package management tool.
+
+After successful installation, Monit will tell you that you will need to configure it and then enable it to begin monitoring. Let's do that now: open /etc/monit/monitrc and configure it like this:
+
+(gist: https://gist.github.com/4286696 file: monitrc)
+
+The nifty bits are how to check for service health: for (link: http://www.nginx.org/ text: NGINX), we can simply check to get a static file on port 8080, and for (link: http://en.wikipedia.org/wiki/Varnish_%28software%29 text: Varnish) on port 80. However, checking for the actual health of PHP can be tricky.
+
+To monitor the stack's capacity of processing PHP code, we'll enable PHP-FPM's ping path: in your /etc/php5/fpm/pool.d/www.conf uncomment the line ping.path = /ping.
+
+Next, configure NGINX so that it knows how to handle the new /ping location:
+
+(gist: https://gist.github.com/4286696 file: yourdomain.tld)
+
+Now, Monit can successfully request '/ping' as long as PHP is up & running.
+
+If any of the monitored services becomes unavailable, Monit will restart it. Group settings ensure a cascade of NGINX => PHP-FPM => Varnish. If a service becomes unresponsive too often, you will be notified by email.
+
+----
+
+Date: 2012-12-14

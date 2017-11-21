@@ -1,0 +1,13 @@
+Title: tobias.is
+
+----
+
+Author: Tobias Baldauf
+
+----
+
+Description: Blog of Tobias Baldauf, web performance evangelist, perfmatters engineer at Trivago, father, veggy, hiker, music lover and forever curious geek.
+
+----
+
+Copyright: © (date: Year) (link: http://tobias.is text: Tobias Baldauf)

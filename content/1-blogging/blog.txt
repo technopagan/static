@@ -1,0 +1,5 @@
+Title: Blogging
+
+----
+
+Text: I enjoy writing about web performance, front end engineering and many geeky things but also on the love of sounds, music and life.

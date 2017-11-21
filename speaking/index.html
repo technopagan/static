@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <title>Speaking &ndash; tobias.is</title>
+  <meta name="description" content="Blog of Tobias Baldauf, web performance evangelist, perfmatters engineer at Trivago, father, veggy, hiker, music lover and forever curious geek.">
+  <link rel="alternate" type="application/rss+xml" title="tobias.is blog" href="/feed">
+
+  <style type="text/css">*,:after,:before{margin:0;padding:0;border:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}ol,ul{list-style:none}img{display:block;max-width:100%;border-radius:3px}a{color:#196dff;text-decoration:none;transition:color .3s,background .3s,border .3s}a:hover{color:#ffab19}.cf:after{content:"";display:table;clear:both}html{height:100%;font-family:Source Sans Pro,serif;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0 auto;font-size:1.25rem;line-height:1.5rem;padding:1.5em;max-width:50em;background:#fff;color:#444546}.hidden{display:none}.header{border-bottom:2px solid #ffab19;margin-bottom:1.5em}.logo{display:block;margin-bottom:1.5em}.menu a{display:block;color:#c11515}.menu a:hover{color:#9e9e9e;text-decoration:none}.menu .active{color:#ffab19}.menu>li{position:relative}.menu>li>a{padding:.75em 0;border-top:1px solid #ddd;font-weight:700}h1{font-size:3.375rem;line-height:5.063rem;font-weight:700;margin-bottom:.5em}h2{font-size:3.375rem;line-height:5.063rem;font-weight:400;margin-bottom:.5em;color:#ffab19}h3{font-size:2.25rem;line-height:3.375rem;font-weight:400;margin-bottom:.5em}h1 a,h2 a,h3 a{color:inherit;border:0!important}.main{padding-bottom:1.5em;border-bottom:2px solid #ffab19;font-size:1.5rem;line-height:2.25rem}.main hr{margin:3em 0;height:2px;background:#ddd}.main figure,.main ol,.main p,.main ul{margin-bottom:1.5em}.main .blogteaser{margin-bottom:3em}.video{float:none;clear:both;width:100%;position:relative;padding-bottom:56.45%;padding-top:25px;height:0}.video iframe{position:absolute;top:0;left:0;width:100%;height:100%}.floated_left{float:left;width:28%;margin-right:1.5em}.floated_left iframe{width:100%;border-radius:3px}.main blockquote{background-color:#f9f9f9;border-left:2px solid #196dff;margin:1.5em 0 1.5em;padding:1em 1.5em .1em 2.5em;position:relative;border-radius:3px}.main blockquote cite{font-size:.75rem}.main blockquote:after,.main blockquote:before{color:#196dff;font-size:5em;position:absolute;line-height:.1em}.main blockquote:before{content:"\201C";left:5px;top:.6em}.main blockquote:after{content:"\201D";right:3px;bottom:0}.main blockquote p{font-size:1rem;font-style:italic}.e-content li,.main.text li{margin:0 0 1.5em 1em;list-style:disc none outside}.e-content li ul li,.main.text li ul li{margin:1.5em 0 1.5em 1em;list-style:circle none outside;font-size:1.25rem}.main h3{clear:both}.main a{border-bottom:2px solid #ddd}.main a:hover{border-color:#444546}.rainbowtext:before{content:"\01F308";color:#000}.rainbowtext{background-image:-webkit-gradient(linear,left top,right top,color-stop(0,#f22),color-stop(.15,#f2f),color-stop(.3,#22f),color-stop(.45,#2ff),color-stop(.6,#2f2),color-stop(.75,#2f2),color-stop(.9,#ff2),color-stop(1,#f22));background-image:gradient(linear,left top,right top,color-stop(0,#f22),color-stop(.15,#f2f),color-stop(.3,#22f),color-stop(.45,#2ff),color-stop(.6,#2f2),color-stop(.75,#2f2),color-stop(.9,#ff2),color-stop(1,#f22));color:transparent;-webkit-background-clip:text;background-clip:text;-webkit-box-decoration-break:clone;box-decoration-break:clone}.rainbowtext:after{content:"\01F308";color:#000;display:inline-block;-moz-transform:scale(-1,1);-webkit-transform:scale(-1,1);-o-transform:scale(-1,1);-ms-transform:scale(-1,1);transform:scale(-1,1)}.teaser{list-style:none}.teaser li{margin-bottom:1.5em}.teaser li img{float:left;width:30%;margin:.4em 3% 0 0}.teaser li p{float:left;width:66.6%}.nextprev{padding:1em 0}.nextprev a{border:0}.nextprev .prev{float:left}.nextprev .next{float:right}.footer{padding:1em 0 6em;font-size:1rem}.colophon{float:left;text-transform:lowercase}@media screen and (min-width:40em){body{padding:3em}.logo{float:left}.menu{float:right;margin:1em -1em 0 0}.menu>li{float:left}.menu>li>a{padding:.75em 1em;border:0}}@media screen and (max-width:40em){html{font-size:66%}.floated_left,.teaser li img{float:none;width:100%;margin:0 0 1.5em 0}.teaser li p{float:none;width:100%}}</style>
+
+  <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA/20ZABUVwQAZq/8Anp6eAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAREREQAIiIiJERERAAiIiIkREREACIiIiREREQAIiIiJERBEQAzMiIkREERADMyIiREQREAMzIiIAAAAAAAAAAAAAAAAAAAAAMzMiIAREEREzMyIgBEQRETMzIiAERBERMzMzMAEREREzMzMwARERETMzMzABERERMzMzMAEREREBgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAA//8AAP//AAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAA" rel="icon" type="image/x-icon">
+
+</head>
+<body>
+
+  <header class="header cf" role="banner">
+    <a class="logo" href="/">
+      <h1>tobias.is</h1>
+    </a>
+    <nav role="navigation">
+
+  <ul class="menu cf">
+        <li>
+      <a  href="/blogging">Blogging</a>
+    </li>
+        <li>
+      <a  class="active" href="/speaking">Speaking</a>
+    </li>
+        <li>
+      <a  href="/about">About</a>
+    </li>
+      </ul>
+
+</nav>  </header>
+  <main class="main text" role="main">
+
+    <h2>Speaking</h2>
+    <p>I'm a <a href="http://who.tobias.is/">web performance evangelist &amp; keynote speaker</a>. If you want me to speak, <a href="http://tobias.is/speaking/info/">please check out my speaker info page</a>.</p>
+<blockquote>
+<p>&quot;Tobias is one of the best presenters I've ever seen.&quot;<br />
+<cite>– Andrew Heifetz, Manager Technical Education and Enablement Team at Akamai</cite></p>
+</blockquote>
+<p><b class="rainbowtext">Please note that due to the current political situation in the USA, I do not accept speaking engagements there at this time.</b></p>
+    <hr>
+
+    <p><strong>04.-07.04.2017</strong><br />
+Keynote <a href="http://tobias.is/speaking/#">Images And Akamai</a>,<br />
+three sessions on <a href="http://tobias.is/speaking/#">Investigating Web Performance Data</a><br>and one <a href="http://tobias.is/speaking/#">Image Optimization Deep-Dive</a><br />
+at <a href="https://www.akamai.com/us/en/services-support/akamai-university-training.jsp">Akamai University - Krakow</a></p>
+<p><strong>07.-08.11.2016</strong><br />
+<a href="http://www.highload.ru/2016/abstracts/2401.html">Your Hero Images Need You! Save the Day with HTTP2 Image Loading</a><br />
+at <a href="http://highload.co/">HighLoad++ 2016 - Moscow</a><br />
+<a href="https://speakerdeck.com/tbaldauf/your-hero-images-need-you-save-the-day-with-http2-image-loading-highload-plus-plus-2016">Slides →</a> and <a href="https://www.youtube.com/watch?v=Qmzk7uQAXiw">Video [53:00] →</a></p>
+<p><strong>17.-21.10.2016</strong><br />
+<a href="https://edge.akamai.com/ec/us/sessions-training/session-schedule.jsp?f1=Developer%20Track">Your Hero Images Need You! Save the Day with HTTP2 Image Loading</a><br>and <a href="https://edge.akamai.com/ec/us/sessions-training/session-schedule.jsp?f1=Developer%20Track">PWAs + Akamai = BFFs 4ever</a><br />
+at <a href="https://edge.akamai.com/">Akamai Edge Conference 2016 - San Francisco</a><br />
+<a href="https://speakerdeck.com/tbaldauf/your-hero-images-need-you-save-the-day-with-http2-image-loading-akamai-edge-conference-2016">Slides →</a> and <a href="https://edge.akamai.com/ec/us/highlights/developer-track-videos.jsp#edge_2016_dev_track_your_images_need_you">Video [41:00] →</a></p>
+<p><strong>22.09.2016</strong><br />
+<a href="https://www.meetup.com/wwruhr/events/233492651/">Your Hero Images Need You! Save the Day with HTTP2 Image Loading</a><br />
+at <a href="https://twitter.com/wwruhr/">WWRuhr - Essen</a><br />
+<a href="https://speakerdeck.com/tbaldauf/your-hero-images-need-you-save-the-day-with-http2-image-loading-90min-workshop-at-velocity-santa-clara-2016">Slides →</a></p>
+<p><strong>21.-23.06.2016</strong><br />
+<a href="http://conferences.oreilly.com/velocity/devops-web-performance-ca/public/schedule/detail/50046">Your Hero Images Need You! Save the Day with HTTP2 Image Loading</a><br />
+at <a href="http://conferences.oreilly.com/velocity/devops-web-performance-ca/">Velocity Conference 2016 - Santa Clara</a><br />
+<a href="https://speakerdeck.com/tbaldauf/your-hero-images-need-you-save-the-day-with-http2-image-loading-90min-workshop-at-velocity-santa-clara-2016">Slides →</a> and <a href="https://www.youtube.com/watch?v=66JINbkBYqw">Video [81:00] →</a><br />
+<a href="http://conferences.oreilly.com/velocity/devops-web-performance-ca/public/schedule/detail/50046" title="rated by attendees">★★★★★ [4.5]</a></p>
+<p><strong>09.06.2016</strong><br />
+<a href="http://www.devtalks.ro/bucharest/events/your-hero-images-need-you-save-the-day-with-http2-image-loading/">Your Hero Images Need You! Save the Day with HTTP2 Image Loading</a><br />
+at <a href="http://www.devtalks.ro/bucharest">DevTalks 2016 - Bucharest</a><br />
+<a href="https://speakerdeck.com/tbaldauf/your-hero-images-need-you-save-the-day-with-http2-image-loading-devtalks-bucharest-2016">Slides →</a> and <a href="https://www.youtube.com/watch?v=qULBBBVAFMYw">Video [23:00] →</a></p>
+<p><strong>13.05.2016</strong><br />
+<a href="http://tobias.is/speaking/#">The Web Experience</a><br />
+at <a href="http://www.akamai.de/">Akamai Tech Day - Munich</a></p>
+<p><strong>09.-10.05.2016</strong><br />
+<a href="https://beyondtellerrand.com/events/duesseldorf-2016/speakers/tobias-baldauf">Your Hero Images Need You! Save the Day with HTTP2 Image Loading</a><br />
+at <a href="http://beyondtellerrand.com/">beyondtellerrand 2016 - Düsseldorf</a><br />
+<a href="https://speakerdeck.com/tbaldauf/your-hero-images-need-you-save-the-day-with-http2-image-loading-1">Slides →</a> and <a href="https://vimeo.com/166145048">Video [34:00] →</a></p>
+<p><strong>01.04.2016</strong><br />
+<a href="http://fronteers.nl/congres/2016-spring/sessions#tobias-baldauf">Your Hero Images Need You! Save the Day with HTTP2 Image Loading</a><br />
+at <a href="http://fronteers.nl/congres/2016-spring">Fronteers Spring</a><br />
+<a href="http://speakerdeck.com/tbaldauf/your-hero-images-need-you-save-the-day-with-http2-image-loading">Slides →</a> and <a href="https://vimeo.com/163113212">Video [21:00] →</a></p>
+<p><strong>28.01.2016</strong><br />
+<a href="#">High Performance Images</a><br />
+at <a href="http://www.meetup.com/de-DE/cologne-germany-high-performance-website-optimization-group/">Cologne Web Performance Meetup</a><br />
+<a href="http://speakerdeck.com/tbaldauf/high-performance-images-internetdagarna-stockholm-2015-20151123">Slides →</a></p>
+<p><strong>23.11.2015</strong><br />
+<a href="http://internetdagarna.se/program/faster_than_lightning/">High Performance Images</a><br />
+at <a href="http://internetdagarna.se/english/">Internetdagarna 2015 - Stockholm</a><br />
+<a href="http://speakerdeck.com/tbaldauf/high-performance-images-internetdagarna-stockholm-2015-20151123">Slides →</a> and <a href="http://www.youtube.com/watch?v=j5sRzAOt4nE">Video [50:00] →</a></p>
+<p><strong>02.11.2015</strong><br />
+<a href="http://www.meetup.com/de/PerfUG/events/">High Performance Images</a><br />
+at <a href="http://www.meetup.com/de/PerfUG/">Paris Performance User Group</a><br />
+<a href="http://speakerdeck.com/tbaldauf/high-performance-images-paris-perfug-meetup-20151102">Slides →</a> and <a href="http://octo.ubicast.tv/permalink/v1253d261b68d6fv884d/">Video [63:00] →</a></p>
+<p><strong>31.10.2015</strong><br />
+<a href="http://www.webperfdays.org/events/2015-amsterdam/schedule.html">High Performance Images</a><br />
+at <a href="http://www.webperfdays.org/events/2015-amsterdam/">WebPerfDays Amsterdam 2015</a><br />
+<a href="http://speakerdeck.com/tbaldauf/high-performance-images-berlin-webperf-meetup-20151027">Slides →</a></p>
+<p><strong>27.10.2015</strong><br />
+<a href="http://www.meetup.com/de/Berlin-Web-Performance-Group/events/225722896/">High Performance Images</a><br />
+at <a href="http://www.meetup.com/de/Berlin-Web-Performance-Group">Berlin Web Performance Meetup</a><br />
+<a href="http://speakerdeck.com/tbaldauf/high-performance-images-berlin-webperf-meetup-20151027">Slides →</a></p>
+<p><strong>28.08.2015</strong><br />
+<a href="http://frontinamsterdam.nl/#Schedule">High Performance Images</a><br />
+at <a href="http://frontinamsterdam.nl/">Front In Amsterdam 2015</a><br />
+<a href="http://speakerdeck.com/tbaldauf/high-performance-images-front-in-amsterdam-2015">Slides →</a></p>
+<p><strong>22.08.2015</strong><br />
+<a href="http://programm.froscon.de/2015/events/1601.html">The JPEG is dead! Long live the JPEG!</a><br />
+at <a href="https://www.froscon.de/en/home/">FrOSCon 2015</a><br />
+<a href="http://speakerdeck.com/tbaldauf/froscon-2015-the-jpeg-is-dead-long-live-the-jpeg">Slides →</a> and <a href="http://www.youtube.com/watch?v=i2YEV__jxzA">Video [52:00] →</a><br />
+<a href="http://frab.froscon.org/en/froscon2015/public/events/1601/feedback/new" title="rated by attendees">★★★★★ [4.6]</a></p>
+<p><strong>22.04.2015</strong><br />
+<a href="http://2015.industryconf.com/talks/#tobias">High Performance Images</a><br />
+at <a href="http://2015.industryconf.com/">IndustryConf 2015 Newcastle</a><br />
+<a href="http://speakerdeck.com/tbaldauf/advanced-image-compression-techniques-industryconf-2015">Slides →</a> and <a href="http://www.youtube.com/watch?v=g6PVY7RsfEw">Video [26:00] →</a></p>
+<p><strong>26.03.2015</strong><br />
+<a href="http://tobias.is/speaking/#">The Psychology Of Speed</a><br />
+at <a href="http://www.akamai.de/">Akamai Tech Day - Stockholm</a><br />
+<a href="http://speakerdeck.com/tbaldauf/the-psychology-of-speed">Slides →</a></p>
+<p><strong>25.03.2015</strong><br />
+<a href="http://tobias.is/speaking/#">High Performance Images</a><br />
+at <a href="http://www.meetup.com/Stockholm-Web-Performance-Group/">WebPerf Meetup - Stockholm</a></p>
+<p><strong>24.03.2015</strong><br />
+<a href="http://www.webbdagarna.se/stockholm-2015/startsida">Responsive Webdesign Best Practices</a><br />
+at <a href="http://www.webbdagarna.se/english">Webbdagarna 2015 - Stockholm</a></p>
+<p><strong>12.03.2015</strong><br />
+<a href="http://tobias.is/speaking/#">Responsive Webdesign Best Practices</a><br />
+at <a href="http://content.akamai.com/ME1210-RWDWorkshop.html">Akamai RWD Workshop - Munich</a></p>
+<p><strong>05.02.2015</strong><br />
+<a href="http://speakerdeck.com/tbaldauf/the-psychology-of-speed">The Psychology Of Speed</a><br />
+at <a href="http://www.akamai.de/">Akamai Conference</a><br />
+<a href="http://speakerdeck.com/tbaldauf/the-psychology-of-speed">Slides →</a></p>
+<p><strong>20.11.2014</strong><br />
+<a href="http://www.webperfdays.org/events/2014-barcelona/index.html">High Performance JPEGs, PNGs and SVG</a><br />
+at <a href="http://www.webperfdays.org/events/2014-barcelona/index.html">WebPerfDays - Barcelona</a><br />
+<a href="http://speakerdeck.com/tbaldauf/advanced-image-compression-techniques-velocityconf-barcelona-november-2014">Slides →</a></p>
+<p><strong>19.11.2014</strong><br />
+<a href="http://velocityconf.com/velocityeu2014/public/schedule/detail/36910">Advanced Image Compression Techniques</a> and <a href="http://velocityconf.com/velocityeu2014/public/schedule/detail/38983">O'Reilly Office Hours</a><br />
+at <a href="http://velocityconf.com/velocityeu2014/">Velocity Conference 2014 - Barcelona</a><br />
+<a href="http://speakerdeck.com/tbaldauf/advanced-image-compression-techniques-velocityconf-barcelona-november-2014">Slides →</a> and <a href="http://www.youtube.com/watch?v=vCHkpxPP6Es">Videos [77:00] →</a><br />
+<a href="http://velocityconf.com/velocityeu2014/public/schedule/detail/36910" title="rated by attendees">★★★★★ [4.6]</a></p>
+<p><strong>11.10.2014</strong><br />
+<a href="http://www.webperfdays.org/events/2014-amsterdam/schedule.html">Image Optimization &amp; Compression</a><br />
+at <a href="http://www.webperfdays.org/events/2014-amsterdam/index.html">WebPerfDays - Amsterdam</a><br />
+<a href="http://speakerdeck.com/tbaldauf/advanced-image-compression-techniques-webperfdays-amsterdam-october-2014">Slides →</a></p>
+<p><strong>01.07.2014</strong><br />
+<a href="http://2014.enterjs.de/abstracts#neue-bildkompressionsverfahren-fuer-optimale-webseiten-performance">Advanced Image Compression Techniques</a><br />
+at <a href="http://2014.enterjs.de/">EnterJS Conf - Cologne</a><br />
+<a href="http://speakerdeck.com/tbaldauf/advanced-image-compression-velocity-conference-santa-clara-oreilly-2014">Slides →</a></p>
+<p><strong>24.06.2014</strong><br />
+<a href="http://velocityconf.com/velocity2014/public/schedule/detail/35128">Advanced Image Compression Techniques</a> and <a href="http://velocityconf.com/velocity2014/public/schedule/detail/36913">O'Reilly Office Hours</a><br />
+at <a href="http://velocityconf.com/velocity2014/">Velocity Conference 2014 - Santa Clara, California</a><br />
+<a href="http://speakerdeck.com/tbaldauf/advanced-image-compression-velocity-conference-santa-clara-oreilly-2014">Slides →</a> and <a href="http://www.youtube.com/watch?v=J-OLWjrC3z0">Video [82:00] →</a></p>
+<p><strong>24.04.2014</strong><br />
+<a href="http://www.feopsconf.com/scheduled-presentations/">Web Performance Engineers - Hunt for the Mythical Beast</a><br />
+at <a href="http://www.feopsconf.com/">FrontEndOps Conf - San Francisco, California</a><br />
+<a href="http://speakerdeck.com/tbaldauf/web-performance-engineers-hunt-for-the-mythical-beast">Slides →</a> and <a href="http://www.youtube.com/watch?v=dnLFY1uyBkY">Video [24:00] →</a></p>
+<p><strong>01.04.2014</strong><br />
+<a href="http://environmentsforhumans.com/2014/responsive-web-design-summit/">Measuring Mobile Web Performance</a><br />
+at <a href="http://environmentsforhumans.com/2014/">Responsive Webdesign Summit</a><br />
+<a href="http://speakerdeck.com/tbaldauf/mobile-web-performance-testing">Slides →</a></p>
+<p><strong>20.03.2014</strong><br />
+<a href="http://mobiletechcon.de/2014se/sessions/mobile-web-performance-testing-responsive-web-experts-day">Mobile Web Performance Testing</a> and <a href="http://mobiletechcon.de/2014se/sessions/abschlusspanel-responsive-web-experts-day">Expert Panel Discussion</a><br />
+at <a href="http://mobiletechcon.de/2014se/">Mobile Tech Conference - Munich</a><br />
+<a href="http://speakerdeck.com/tbaldauf/mobile-web-performance-testing">Slides →</a></p>
+<p><strong>16.02.2014</strong><br />
+<a href="http://workingdraft.de/158/">Rendering Performance, Phantomas, HTTP Archive &amp; Performance Budgets</a><br />
+at <a href="http://workingdraft.de/">Working Draft Podcast</a></p>
+<p><strong>13.11.2013</strong><br />
+<a href="http://velocityconf.com/velocityeu2013/public/schedule/detail/31529">Hands-on Web Performance Optimization Workshop</a><br />
+at <a href="http://velocityconf.com/velocityeu2013/">Velocity EU 2013</a> with <a href="http://andydavies.me/about/">Andy Davies</a><br />
+<a href="http://speakerdeck.com/tbaldauf/velocity-2013-hands-on-web-performance-workshop">Slides →</a></p>
+<p><strong>25.10.2013</strong><br />
+<a href="https://border-none.net/2013/#baldauf">Mobile Performance Patterns</a><br />
+at <a href="https://border-none.net/2013/">border: none 2013</a><br />
+<a href="http://speakerdeck.com/tbaldauf/measuring-mobile-web-performance">Slides →</a></p>
+<p><strong>24.10.2013</strong><br />
+<a href="http://ux-day.de/von-performance-ladezeiten-ux-designtobias-baldauf/">Web Performance Optimization &amp; User Experience Design</a><br />
+at <a href="http://ux-day.de/">UX Day 2013</a><br />
+<a href="http://speakerdeck.com/tbaldauf/web-performance-and-the-psychology-of-speed">Slides →</a></p>
+<p><strong>26.09.2013</strong><br />
+<a href="https://plus.google.com/115888413548938267810/posts">Web Performance Optimization</a><br />
+at <a href="http://plus.google.com/u/0/115888413548938267810/posts">WWRuhr</a><br />
+<a href="http://speakerdeck.com/tbaldauf/web-performance-and-the-psychology-of-speed">Slides →</a></p>
+<p><strong>29.08.2013</strong><br />
+<a href="http://www.facebook.com/photo.php?fbid=477724672323460&set=a.457898827639378.1073741828.437217009707560&type=1&relevant_count=1">Meet4Speed</a><br />
+at <a href="http://coworkingnight.chiligum.com/">Coworking Night</a> with <a href="http://twitter.com/derSchepp">Christian Schäfer</a> &amp; <a href="http://www.webzwom.de/">Manuel Meinhard</a></p>
+<p><strong>24.08.2013 – 25.08.2013</strong><br />
+<a href="http://programm.froscon.org/2013/events/1207.html">Web Performance Optimization Automation</a><br />
+at <a href="http://www.froscon.de/en/">FrOSCon – Free and Open Source Software Conference</a><br />
+<a href="http://speakerdeck.com/tbaldauf/automating-web-performance-optimization">Slides →</a></p>
+<p><strong>27.05.2013 – 28.05.2013</strong><br />
+<a href="http://2013.beyondtellerrand.com/developer-garden-stage/">Advanced Image Optimization with Adept</a><br />
+at <a href="http://2013.beyondtellerrand.com/developer-garden-stage/">beyond tellerrand conference – Developer Garden Stage</a></p>
+<p><strong>18.05.2013</strong><br />
+<a href="http://www.webperfdays.org/events/2013-amsterdam/schedule.html">WebPerf &amp; Image Optimization</a><br />
+at <a href="http://www.webperfdays.org/">WebPerfDays Amsterdam</a><br />
+<a href="http://speakerdeck.com/tbaldauf/image-optimization-methodology">Slides →</a></p>
+<p><strong>13.05.2013 – 14.05.2013</strong><br />
+<a href="http://atmosphere-conference.com/en/lecture/34/">Automating Web Performance Optimization</a><br />
+at <a href="http://atmosphere-conference.com/">Atmosphere Conference</a><br />
+<a href="http://speakerdeck.com/tbaldauf/automating-web-performance-optimization">Slides →</a> and <a href="http://www.youtube.com/watch?v=XKnfZltJuEA">Video [45:00] →</a></p>
+<p><strong>17.04.2013</strong><br />
+<a href="http://www.startplatz.de/event/web-performance-workshop/">Web Performance Workshop</a><br />
+at <a href="http://www.startplatz.de/">STARTPLATZ</a></p>
+<p><strong>16.04.2013</strong><br />
+<a href="http://speakerdeck.com/tbaldauf/image-optimization-methodology">Image Optimization Methodology</a><br />
+at <a href="http://environmentsforhumans.com/2013/responsive-web-design-summit/">Responsive Web Design Summit 2013</a><br />
+<a href="http://speakerdeck.com/tbaldauf/image-optimization-methodology">Slides →</a></p>
+<p><strong>14.02.2013</strong><br />
+<a href="http://speakerdeck.com/tbaldauf/web-performance-optimization-user-experience-design">Web Performance Optimization is User Experience Design</a><br />
+at <a href="http://webworker-nrw.de/">WWNRW</a><br />
+<a href="http://speakerdeck.com/tbaldauf/web-performance-optimization-user-experience-design">Slides →</a></p>
+<p><strong>26.05.2012</strong><br />
+<a href="http://www.meetup.com/cologne-germany-high-performance-website-optimization-group/events/60538152/">CSS Selector Performance</a><br />
+at <a href="http://www.meetup.com/cologne-germany-high-performance-website-optimization-group/events/past/?scroll=true#past">CGNWebPerf</a><br />
+<a href="http://speakerdeck.com/tbaldauf/web-performance-css-selectors">Slides →</a></p>
+<p><strong>26.01.2012</strong><br />
+<a href="http://www.meetup.com/cologne-germany-high-performance-website-optimization-group/events/44724302/">Image Optimizations for Web Performance</a><br />
+at <a href="http://www.meetup.com/cologne-germany-high-performance-website-optimization-group/events/past/?scroll=true#past">CGNWebPerf</a><br />
+<a href="http://speakerdeck.com/tbaldauf/web-performance-image-optimizations">Slides →</a></p>
+<p><strong>19.04.2010</strong><br />
+<a href="http://sg-muenster.gi.de/veranstaltungen.html">Web Performance Optimization Primer</a><br />
+at <a href="http://sg-muenster.gi.de/">Gesellschaft für Informatik - Universität Münster</a><br />
+<a href="http://speakerdeck.com/tbaldauf/web-performance-optimization-primer">Slides →</a></p>
+<p><strong>24.09.2009</strong><br />
+<a href="http://ccc.de/de/updates/2009/events/c4-openchaos">High Performance Websites</a><br />
+at <a href="http://koeln.ccc.de/">Chaos Computer Club Cologne - Open Chaos</a><br />
+<a href="http://speakerdeck.com/tbaldauf/high-performance-websites">Slides →</a></p>
+  </main>
+
+  <footer class="footer cf" role="contentinfo">
+
+    <div id="hcard-Tobias-Baldauf" class="vcard hidden">
+      <a class="url fn" href="http://who.tobias.is/">Tobias Baldauf</a>
+      <a class="email" href="mailto:mail@tobias.is">mail@tobias.is</a>
+      <div class="adr">
+        <div class="street-address">Kühlwetterstraße 30</div>
+          <span class="locality">Düsseldorf</span>
+          <span class="postal-code">40239</span>
+          <span class="country-name">Germany</span>
+        </div>
+    </div>
+
+    <div class="colophon">
+  		<a class="email" href="mailto:mail@tobias.is">mail@tobias.is</a>
+  		&nbsp;&#124;&nbsp;
+  		<a title="follow me on Twitter" href="//twitter.com/tbaldauf" rel="me">Twitter</a>
+  		&nbsp;&#124;&nbsp;
+  		<a title="Slides of my talks on Speaker Deck" href="//speakerdeck.com/tbaldauf/" rel="me">Slides</a>
+  		&nbsp;&#124;&nbsp;
+      <a href="http://github.com/technopagan/" rel="me">GitHub</a>
+      &nbsp;&#124;&nbsp;
+  		<a title="Subscribe to my blog" href="/feed" rel="me">Feed</a>
+    </div>
+
+  </footer>
+
+  <script type="text/javascript">
+    function loadCSS( href, before, media ){ "use strict"; var ss = window.document.createElement( "link" ); var ref = before || window.document.getElementsByTagName( "script" )[ 0 ]; ss.rel = "stylesheet"; ss.href = href; ss.media = "only x"; ref.parentNode.insertBefore( ss, ref ); setTimeout( function(){ ss.media = media || "all"; } ); return ss; }
+    loadCSS( "/assets/css/font_sourcesans.2014092901.min.css" );
+  </script>
+
+</body>
+</html>

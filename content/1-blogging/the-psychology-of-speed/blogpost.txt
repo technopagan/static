@@ -1,0 +1,18 @@
+Title: The Psychology of Speed
+
+----
+
+Date: 2015-09-04
+
+----
+
+Text: 
+
+**1000ms**
+- Ilya's Time To Glass
+-  1s as sweet spot for conversions (Tammy)
+- Origin: human conversation performance timing. 1s as turn-taking marker
+- Research by:
+  - Speach writers & Speach Psychology Consultants for famous public figures (http://www.write-out-loud.com/speech-rate.html)
+  - Creators of human-to-computer speech interfaces: when to stop listening & start processing (https://faculty.washington.edu/levow/papers/CHI_97/silence.pdf)
+  - Professional Radio News services:optimizing words per minute / syllables per second / breathing pauses / purposeful pauses to convey maximum amount of information successfully (http://prosodia.upf.edu/home/arxiu/publicacions/rodero/rodero_a-comparative-analysis-of-speech-rate-and-perception-in-radio-bulletins.pdf)

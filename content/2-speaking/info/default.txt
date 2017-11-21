@@ -1,0 +1,38 @@
+Title: Speaker Info
+
+----
+
+Text: 
+
+**Name:** Tobias Baldauf
+**Company:** (link: https://www.trivago.de/ text: Trivago GmbH)
+**Title:** Web Performance Engineer
+**Twitter:** (link: http://twitter.com/tbaldauf text: @tbaldauf)
+**Website:** (link: http://who.tobias.is/ text: who.tobias.is)
+**Location:** Düsseldorf, Germany
+
+ ### Bio
+ ** Short Version:**
+Tobias is a web performance evangelist & (link: https://twitter.com/hashtag/PerfMatters?src=has text: #perfmatters) engineer at (link: http://tech.trivago.com/ text: Trivago). He creates DevOps tools, image optimization algorithms & speaks at conferences. He's a dedicated dad, mindful veggy & music lover.
+ 
+** Long Version:**
+ Tobias Baldauf is a web performance evangelist and (link: https://twitter.com/hashtag/PerfMatters?src=has text: #perfmatters) engineer at (link: http://tech.trivago.com/ text: Trivago). He creates innovative web performance tools, new image optimization algorithms and speaks at conferences. He's a dedicated dad, tries to be a mindful veggy and loves making music. Find out more at (link: http://who.tobias.is/ text: who.tobias.is)
+
+### Headshots
+[<img alt="Portrait of Tobias Baldauf" class="floated_left" src="http://tobias.is/content/2-speaking/info/tobias-baldauf-20161214-avatar-resized-compressed-thumb.jpg">](http://tobias.is/content/2-speaking/info/tobias-baldauf-20161214-avatar-resized-compressed.jpg)[<img alt="Portrait of Tobias Baldauf" class="floated_left" src="http://tobias.is/content/2-speaking/info/tobias-baldauf-avatar-square-thumb.jpg">](http://tobias.is/content/2-speaking/info/tobias-baldauf-avatar-square.jpg)[<img alt="Portrait of Tobias Baldauf" class="floated_left" src="http://tobias.is/content/2-speaking/info/tobias-baldauf-avatar-old-thumbnail.jpg">](http://tobias.is/content/2-speaking/info/tobias-baldauf-avatar-old.jpg) 
+<p class="cf"><small>Click on a photo to download it in high resolution.</small></p>
+
+ ### Conference Photos
+[<img alt="Tobias Baldauf at Velocity 2016 Santa Clara" class="floated_left" src="http://tobias.is/content/2-speaking/info/tobias-baldauf-velocity-2016-santa-clara-diversity-thumb.jpg">](http://tobias.is/content/2-speaking/info/tobias-baldauf-velocity-2016-santa-clara-diversity.jpg)[<img alt="Tobias Baldauf in Panel discussion during Fronteers in Amsterdam" class="floated_left" src="http://tobias.is/content/2-speaking/info/tobias-baldauf-fronteers-panel-2016-thumb.jpg">](http://tobias.is/content/2-speaking/info/tobias-baldauf-fronteers-panel-2016.jpg)[<img alt="Tobias Baldauf speaking at Internetdagarna Stockholm 2015" class="floated_left" src="http://tobias.is/content/2-speaking/info/tobias-baldauf-internetdagarna-2015-speaking-thumb.jpg">](http://tobias.is/content/2-speaking/info/tobias-baldauf-internetdagarna-2015-speaking.jpg)
+<p class="cf"><small>Click on a photo to download it in high resolution.</small></p>
+
+### Videos
+[<img alt="Tobias Baldauf speaking at HighLoad++ Moscow 2016" class="floated_left" src="//img.youtube.com/vi/Qmzk7uQAXiw/0.jpg">](//www.youtube.com/watch?v=Qmzk7uQAXiw)[<img alt="Tobias Baldauf speaking at Velocity Santa Clara 2016" class="floated_left" src="//img.youtube.com/vi/66JINbkBYqw/0.jpg">](//www.youtube.com/watch?v=66JINbkBYqw)[<img alt="Tobias Baldauf speaking at Fronteers Spring 2016" class="floated_left" src="//i.vimeocdn.com/video/566440627.jpg?mw=246&q=75">](//vimeo.com/163113212)
+<p class="cf"><small>Click on a preview image to watch the video.</small></p>
+
+### Quid Pro Quo
+I will **promote my presence at your conference** before, during and afterwards. I will **deliver an up-to-date and unique talk** that is valuable to the audience. I will **stay inside the timebox** for my talk and handle Q&A in the predefined manner.  I will be **well-prepared and punctual for tech checks**. I will bring my own laptop, clicker and video adapter. I will **socialize at warmups, birds of a feather and speakers' dinner**. I will **mingle with attendees** during the conference and answer questions. I will **publish and promote my slidedeck and recordings** after the conference. I will help ** facilitate sponsoring opportunities**. I will be friendly, professional and help to **uphold the conference's Code of Conduct**.
+
+I expect you to **promote my talk** before, during and after the conference. I expect you to **have a working stage setup** with mic and projector. I expect you to have a **Code of Conduct** for the conference that you can enforce. I'd like you to **record and publish my talk.** I'd like you to **pay for travel and boarding** unless we've agreed otherwise. I'd like you to **inform me on tech setup** such as projector resolution, headset etc. I'd like you to **reply to my emails** in a timely fashion. I wish you'd **not hand out useless swag**. I wish you'd have **conference t-shirts available in women's fitted cut**, too. I wish you'd have an inclusive **scholarship program** to foster diversity.
+
+**<a class="email" href="mailto:mail@tobias.is">Contact me if you want me to speak →</a>**

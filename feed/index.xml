@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+
+  <channel>
+    <title>Blog of Tobias Baldauf - tobias.is</title>
+    <link>http://tobias.is</link>
+    <atom:link href="http://tobias.is/feed/" rel="self" type="application/rss+xml" />
+
+        <description>Blog posts by Tobias Baldauf as published on tobias.is</description>
+    
+        <item>
+      <title>Ilha da Madeira - Photo Series</title>
+      <link>http://tobias.is/blogging/photo-series-madeira</link>
+      <guid>http://tobias.isblogging/photo-series-madeira</guid>
+      <pubDate>Fri, 24 Feb 2017 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p>We spent quite some time on the incredible <a href="https://en.wikipedia.org/wiki/Madeira">island of Madeira</a>. I took a lot of photos during hikes, trail running and exploring. Here are some of my favorites, showing the island's and ocean's beauty.</p>]]></description>
+    </item>
+        <item>
+      <title>A Love Letter to the Inov-8 TerraClaw 220 Trail Runners</title>
+      <link>http://tobias.is/blogging/ultralight-hiking-minimalist-trail-runners</link>
+      <guid>http://tobias.isblogging/ultralight-hiking-minimalist-trail-runners</guid>
+      <pubDate>Tue, 17 Jan 2017 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p>In my strive towards minimalism, I wanted to get rid of most of my shoes. But replacing all those different types of shoes with only one pair that fulfilled all my requirements was difficult. Luckily, I discovered the Inov-8 TerraClaw 220 trail runners.</p>
+<p>I was already comfortable hiking in trail runners thanks to the <a href="https://en.wikipedia.org/wiki/Ultralight_backpacking">Ultralight movement</a>, so getting rid of hiking boots was easy. What was more tricky was to find a pair of trail runners that had a very low drop to enable forefoot running. Secondly, I wanted shoes that were very light &amp; made of breathable materials so that they could drain water well. These features would be useful in jogging &amp; trail running. Lastly, I wanted shoes that looked good as everyday street wear in combination with jeans + t-shirt and did not have the ridiculous &quot;neon-green on shiny silver&quot; look of so many running shoes. </p>
+<p>On my journey, I went through pairs of Asics, Newtons, Merrells and others. My first Asics were made for heel running, but lasted well enough. They were not very light and both water draining &amp; looks were mediocre.</p>
+<p>Next, I went for <a href="http://www.newtonrunning.com/">Newtons</a> because they were very light &amp; made for forefoot running. Also, they looked good. But they were unusable as trail runners or on proper hiking tours because of their street-focused sole, which melted away like butter under a hot knife when confronted with rubble &amp; boulders.</p>
+<p>Because of the bad experience when using street running shoes on trails &amp; hikes, I went for proper trail runners by Merrell next. They had a very good sole &amp; looked good. But they were heavier than I liked and the durability of their upper mesh was extremely poor so that I went through two pairs within a matter of a few months. Their drop - the lowest drop I could find in all of Merrell's trail runner offerings - was still significant so that forefoot running was difficult.</p>
+<p>After this ride between the different ends of the spectrum, I turned my research mode on &amp; read through dozens of trail runner reviews and hundreds of costumer comments. At its end, there was a short list of three different shoes that might fit the bill, each with small trade-offs in one category or another.</p>
+<p>Luckily, the price for the <a href="https://www.inov-8.com/men/shoes/trail-running/terraclaw-220-mens-trail-running-shoes-black">Inov-8 TerraClaw 220</a> was lowered while I was pondering which to try, so my decision was made. And I'm happy with the way things turned: the TerraClaw 220 are lighter than the Newtons, weighing only 220g per shoe. They have a negligible drop of only 4mm, which makes forefoot running easy. Their sole gives great grip on most surfaces.</p>
+<p>Their upper mesh is very durable: I've run with them through fields of thorn bushes and boulders &amp; rubble and there's not a single thread ripped yet. The mesh is also highly breathable and drains water very well: I've forded streams in them, combined with Merino toe socks, and only a short while of running in them after being completely submerged, these shoes feel great again. And lastly, the TerraClaw 220 in navy blue look snazzy and can be worn every day as part of my uniform without looking out of place.</p>
+<p>All in all, I'm giving the Inov-8 TerraClaw an 8/10 rating: they fulfill all my requirements and empower me in all my various activities while traveling with only a single pair of shoes. They don't get a 10/10 rating for two reasons: 1. the sole wears off slightly faster than I'd like - you get three months of everyday use out of them, including trail running + jogging - and 2. the toe box is barely wide enough.</p>
+<p>If Inov-8 would increase durability of the sole by ~15% and offer a wide fit for the toe box, the TerraClaw 220 would be the ultimate ultralight trail runners. Even without these optimizations, I love my TerraClaw 220 and I'm grateful that they carry me to so many beautiful places on this world: my first pair ran on the streets of San Francisco &amp; Moscow as well as the intense trails of Madeira island. Now my 2nd pair stands ready &amp; I'm glad to be able to trust in them again.</p>]]></description>
+    </item>
+        <item>
+      <title>Even Faster Images using HTTP2 and Progressive JPEGs</title>
+      <link>http://tobias.is/blogging/even-faster-images-using-http2-and-progressive-jpegs</link>
+      <guid>http://tobias.isblogging/even-faster-images-using-http2-and-progressive-jpegs</guid>
+      <pubDate>Thu, 12 Jan 2017 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p>This article, a summary of my progressive JPEG optimization research, is a cross-post of my contribution to the 2016 edition of <a href="https://calendar.perfplanet.com/">the Web Performance Advent Calendar</a>. For the original post and its comments, please check out <a href="https://calendar.perfplanet.com/2016/even-faster-images-using-http2-and-progressive-jpegs/">the initial publication page</a>. </p>
+<p><strong>tl;dr:</strong> Progressive images render faster on HTTP2, thus increasing perceived performance. Take control of progressive JPEG’s scan layers to show meaningful image content with only 25% of image data sent. Use HTTP2 Server Push for progressive JPEG scan layers to maximize rendering performance for key images.</p>
+<h2>We Have An Image Problem</h2>
+<p><a href="/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/engage-enrage-encourage_compressed.jpg"><img src="/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/01-engage-enrage-encourage_compressed.jpg" alt="Engaging, enraging and encouraging images" /></a> Images make the world go round: they engage, enrage &amp; encourage us. The web as we know it depends on images. This comes at a price: <a href="http://httparchive.org/interesting.php#bytesperpage">images make up ~65% of average total bytes per page</a> and have a <a href="http://httparchive.org/interesting.php#onLoad">high correlation to page load time</a> as well as <a href="http://httparchive.org/interesting.php#SpeedIndex">the Speed Index</a>. They also <a href="http://httparchive.org/trends.php#bytesImg&amp;reqImg">grow by ~200kb year after year</a>. In short, images are heavy and make things slow.</p>
+<h2>Get Compressin’!</h2>
+<p><a href="/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/httparchive-201605-images-overview.png"><img src="/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/httparchive-201605-images-overview.png" alt="HTTP Archive Statistics" /></a> The best way to counter negative effects of loading image assets is image compression: using tools such as <a href="https://kornel.ski/">Kornel Lesiński</a>‘s <a href="https://imageoptim.com/">ImageOptim</a>, which utilizes great libraries like <a href="https://github.com/mozilla/mozjpeg">mozjpeg</a> and <a href="https://pngquant.org/">pngquant</a>, we can reduce image byte size without sacrificing visual quality. And thanks to libraries such as <a href="https://github.com/pornel/dssim/">DSSIM</a> we can ensure good visual quality testing different compression levels.</p>
+<p>The bad news is that even after reducing image byte size <a href="https://www.youtube.com/watch?v=j5sRzAOt4nE">by an average ~29% per image</a> using above tools <a href="https://calendar.perfplanet.com/2015/immaculate-imagery-with-lazy-pictures-bpg/">and even making use of other image formats such as WebP</a>, images are still likely to be the single largest asset type on any given website – closely followed by JavaScript. We need a way to deliver these crucial components for emotional engagement faster.</p>
+<h2>Enter Multiplexing</h2>
+<p><a href="/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/http2-resource-prioritization.png"><img src="/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/http2-resource-prioritization.png" alt="HTTP2 Multiplexing Diagram" /></a> Part of the solution comes from a popular area of the performance conundrum: HTTP2. One of its main benefits is “Multiplexing”: the ability to handle multiple requests and responses at the same time, all using the same TCP connection.</p>
+<p>With Multiplexing, website assets load faster. Depending on site architecture, you can also prioritize resources inside a multiplexed connection: flagging assets such as critical CSS with high priority in HTTP2 will make them load sooner. On top of this, pushing not yet requested but crucial assets via HTTP2 Server Push can create a super fast perceived performance, when applied correctly. More on this later.</p>
+<p><a href="/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/http1-vs-http2-webpagetest-wpt-waterfall-difference.png"><img src="/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/http1-vs-http2-webpagetest-wpt-waterfall-difference.png" alt="HTTP2 Waterfall demo on WebPagetest" /></a> Multiplexing has a curious side-effect when it comes to image loading: certain kinds of images load significantly faster in terms of perceived performance because initial image information can be downloaded in parallel via HTTP2 Multiplexing. Progressive JPEGs and interlaced PNGs benefit from this.</p>
+<h2>Progressive All The Things</h2>
+<p><img src="/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/baseline-sequential-jpeg-loading-animation.gif" alt="Baseline sequential image loading example" /></p>
+<p><img src="/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/progressive-jpeg-loading-animation.gif" alt="Progressive JPEG image loading example" /></p>
+<p>Progressive and interlaced images are like layer cake: they contain information not in a single stream that renders images from top left to bottom right, but as a stack of layers, each improving on information already shipped in earlier layers. Each individual layer is more lightweight in terms of byte size than the final image.</p>
+<p>Since browsers loading website assets via HTTP2 Multiplexing will initiate almost all image downloads simultaneously, the initial, lightweight layers of progressive and interlaced images start rendering much more quickly than sequentially encoded images. Sequentially encoded images render in a windowblind manner: line by line until all image information has been shipped.</p>
+<p><a href="/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/pJPEG-on-SPDY-John-Melor-Google.png"><img src="/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/pJPEG-on-SPDY-John-Melor-Google.png" alt="John Mellor's SPDY test demo" /></a> That perceived performance and the Speed Index benefit from delivering progressive JPEG scan layers via HTTP2 Multiplexing was already observed <a href="https://yoavweiss.github.io/respimg-blinkon-presentation/#/71/2">by Google’s John Mellor in 2012.</a> He was experimenting with the <a href="https://www.chromium.org/spdy">SPDY</a> protocol, a precursor to HTTP2. Today, we can improve on this discovery to make progressive images appear even faster:</p>
+<h2>Take The Power Back! Or: The Scans File</h2>
+<p><a href="/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/progressive-jpeg-ALL-scan-levels-rhine-river.jpg"><img src="/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/progressive-jpeg-ALL-scan-levels-rhine-river.jpg" alt="Demo of 10 scan layers" /></a> Progressively encoded JPEGs contain ten scan layers by default. That means ten iterative layers of image information build on each other to deliver the final visual quality of the image. The first visible scan layer of a progressive JPEG is always highly pixelated and often black &amp; white because it saves on color channel information. If you want to check out how each scan layer looks, <a href="http://encode.ru/threads/1800-JSK-JPEG-Scan-Killer-progressive-JPEG-explained-in-slowmo">use Frédéric Kayser’s “jsk” tool to split a progressive JPEG into its individual scan layers</a>.</p>
+<p>Why ten layers? That’s the default setting inside all common JPEG encoders. It’s a compromise between byte size per scan layer, visual quality and helping the JPEG encoder achieve smaller total image file sizes <a href="https://en.wikipedia.org/wiki/JPEG#Entropy_coding">during Huffman table optimizations</a>.</p>
+<p><a href="/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/progressive-jpeg-scan-level-wizard-file-script-default-highlights-commented.png"><img src="/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/progressive-jpeg-scan-level-wizard-file-script-default-highlights-commented.png" alt="Default scan layers script" /></a> Unlike PNGs, which use a fixed method <a href="https://en.wikipedia.org/wiki/Adam7_algorithm">called Adam7 encoding</a> to create interlaced layers, we can supplement JPEG encoders with custom directives for scan layer creation: the “-scans” flag for JPEG encoders. You can use it like this with mozjpeg: “cjpeg -quality 75 -scans customscans.txt -outfile output.jpg input.jpg”. Now the JPEG encoder accepts <a href="/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/scans.txt">a plaintext file containing your custom commands for scan layer creation</a>.</p>
+<p>Each line in the scans file defines a new scan layer. They contain multiple parts of information on color channel, matrix index and lossiness.</p>
+<p>The three channels are brightness (‘Y’), blue (‘Cb’) and red (‘Cr’), which respectively have the numbers 0,1 &amp; 2 in the scans file. The matrix index in the scan file goes from 0 to 63, covering a 64-pixel block. (JPEG encoding has a native 8×8 block setting.)</p>
+<h2>Getting Creative</h2>
+<p><a href="/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/optimized-progressive-jpeg-scan-levels-wizard-file-script-annotated.png"><img src="/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/optimized-progressive-jpeg-scan-levels-wizard-file-script-annotated.png" alt="Custom scan layers script" /></a> Our goal is to show meaningful image contents sooner while enabling browsers to lay out the site speedily. Our initial scan layer should therefore be lean but meaningful, followed by an as steep increase in perceived visual quality as possible.</p>
+<p>The custom scans file displayed here ensures a first scan layer with appropriate colors. At the second scan layer, we already have a highly acceptable preview. Scan layers three and four deliver the necessary color information: the red channel before blue channel since it is likely that red color information is more important to improve visuals, e.g. when showing faces. After the fourth scan layer, the image looks complete and the final fifth scan layer improves only fine high frequency details. These improvements are reflected in an ~6% better Speed Index, reflecting the perceived performance.</p>
+<p><a href="/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/http2-pJPEG-vs-opJPEG-table-timing-wpt-webpagetest-results-annotated.png"><img src="/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/http2-pJPEG-vs-opJPEG-table-timing-wpt-webpagetest-results-annotated.png" alt="WebPagetest results" /></a></p>
+<p><a href="/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/http2-pJPEG-vs-opJPEG-wpt-webpagetest-results-visual-progress.png"><img src="/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/http2-pJPEG-vs-opJPEG-wpt-webpagetest-results-visual-progress.png" alt="Progressive JPEG image loading example" /></a></p>
+<p>The above scans script is only one example of what is possible when customizing progressive JPEG encoding: using the same approach, you could recreate <a href="http://www.guypo.com/introducing-lqip-low-quality-image-placeholders/">Guy Podjarny’s LQIP technique</a> within progressive JPEGs <a href="http://cloudinary.com/blog/progressive_jpegs_and_green_martians">as shown by Jon Sneyers</a>.</p>
+<h2>Push! Push! Push!</h2>
+<p>HTTP2 offers another tool we may use for even faster delivery of image contents: Server Push. <a href="https://www.shimmercat.com/">In supporting HTTP2-enabled web servers</a>, it is possible to flag individual scan layers of progressive JPEGs with high priority and making the server push those scan layers into <a href="https://calendar.perfplanet.com/2016/a-tale-of-four-caches/">the client browsers’ Push cache</a> even before the request for the respective image is initiated. Browsers then can lay out the page and render initial scan layers with the performance of a warmed cache, making users perceive the site’s images as rendering exceptionally fast.</p>
+<p>Check out <a href="https://calendar.perfplanet.com/2016/http2-push-the-details/">this brilliant article in this year’s Performance Advent Calendar</a> to find out more about HTTP2 Server Push.</p>
+<p><a href="/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/wpt-webpagetest-4way-comparison-ServerPush-HTTP2-Sequential-vs-pJPEG-vs-OpJPEG-vs-ServerPush-tables-Firefox.png"><img src="/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/wpt-webpagetest-4way-comparison-ServerPush-HTTP2-Sequential-vs-pJPEG-vs-OpJPEG-vs-ServerPush-tables-Firefox.png" alt="WebPagetest results" /></a></p>
+<p><a href="/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/wpt-webpagetest-4way-comparison-ServerPush-HTTP2-Sequential-vs-pJPEG-vs-OpJPEG-vs-ServerPush-Visual-Progress-Graph-Firefox.png"><img src="/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/wpt-webpagetest-4way-comparison-ServerPush-HTTP2-Sequential-vs-pJPEG-vs-OpJPEG-vs-ServerPush-Visual-Progress-Graph-Firefox.png" alt="Progressive JPEG image loading example" /></a></p>
+<p>This technique should only be used strategically: find out which images are crucial for creating user engagement on your page, e.g. an emotion-evoking hero image or a product overview image, and only apply Server Push to the initial scan layers of those JPEG images. This will enable you to increase user engagement and thus successful conversions without harming overall site asset downloads.</p>
+<h2>Takeaways</h2>
+<ul>
+<li>Multiple progressive or interlaced images render faster on HTTP2 thanks to Multiplexing</li>
+<li>Taking control of progressive JPEG creation may give users a better visual experience</li>
+<li>HTTP2 Server Push can increase perceived performance for important images</li>
+</ul>
+<p><strong>Credits:</strong> Thanks to <a href="http://finding-marbles.com/">Corinna Baldauf</a> for proof &amp; editing. Thanks to <a href="http://twitter.com/colinbendell">Colin Bendell</a> and <a href="https://blog.yoav.ws/">Yoav Weiss</a> for inspiration &amp; support.</p>]]></description>
+    </item>
+        <item>
+      <title>A Guide to Better Slides for Public Speaking</title>
+      <link>http://tobias.is/blogging/guide-to-better-slides-for-public-speaking</link>
+      <guid>http://tobias.isblogging/guide-to-better-slides-for-public-speaking</guid>
+      <pubDate>Fri, 15 Jul 2016 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p>I've been asked recently to review slide decks and to give advice on public speaking. Not being a professional speaker, I'm simply following a self-written guide. Today, I'm making this guide public so that it helps you give engaging &amp; helpful talks.</p>
+<h2>The Guide</h2>
+<ol>
+<li>Write down the high-level ideas: write the most important bit you want to convey to your audience first, then write down others. Stick to three bits or less.</li>
+<li>Break these high-level ideas down into chapters.</li>
+<li>Assign the following roles to these chapters:
+<ul>
+<li><strong>Pain:</strong> What is a shared pain that the audience acknowledges so that you can establish a problem that needs solving. Think of it as the antagonist of a story. You can only assign this role once.</li>
+<li><strong>Solution:</strong> What is the high-level solution that solves the problem and relieves the pain? Think of it as the protagonist who is fighting the antagonist. You can only assign this role once, too.</li>
+<li><strong>Supporting Content:</strong> Stories, anecdotes, data etc. that highlight the depth of the problem and the power of the solution. You may assign this role multiple times, ideally 2-3 times.</li>
+<li><strong>Personal Touch:</strong> What is the emotionally engaging, human-relatable part? You may assign this role multiple times, though once will do.</li>
+</ul></li>
+<li>
+<p>At this point, you should be comfortable in answering the following questions about your talk:</p>
+<ul>
+<li>Who is the intended audience?</li>
+<li>What should people take away from your talk?</li>
+<li>What about your talk is unique that should compel people to listen?</li>
+</ul>
+<p>If you find that you don’t have the answer to one of these questions or that your answers don’t go well together with the talk you want to give, start over.</p>
+</li>
+<li>Fill your chapters with bullet-point notes about contents you intent to put into each one. Drill down several levels deep.</li>
+<li>Read through your outline again from top to bottom. Now try to think of an overarching storyline that incorporates the pain, solution and supporting elements and picks up on the personal touch. The storyline may simply be your own strive for the solution. It could also be a a reoccurring key element that guides the audience through the story, e.g. a metric measured after each chapter.</li>
+<li>Excluding the beginning and ending, pick a chapter with its bullet-point notes and create slides and speaker notes for it. A tip on speaker notes: while it makes sense to write them down and use them during your preparations, be aware that during the actual talk, you won't be able to rely on reading those notes at all.</li>
+<li>Repeat step no. 7 for all content chapters and only after everything else is done, create slides for the beginning and the ending.</li>
+<li>
+<p>After creating slides for all chapters, read through the entire slide deck and during the process, answer the following questions:</p>
+<ul>
+<li>Is all information comprehensive so that people can follow up on it?</li>
+<li>Is each message I'm trying to convey as clear as can be?</li>
+<li>Can I re-order the contents to create a better story arch and keep the suspense?</li>
+<li>Which information is redundant and can be left out?</li>
+</ul>
+<p>Applying those questions, get busy making information comprehensive and yet conscise, simplify your wording and, above all, shorten and delete as much as possible. Slides are no place for prose.</p>
+</li>
+<li>After pruning the slides, go through them yet again, this time thinking about dynamics and dramatic reading:
+<ul>
+<li>At which points do you intent to make a pause for dramatic effect or to let something sink in? Add a marker into your speaker notes for this slide, e.g. &quot;O-O-&quot; for pausing by breathing in and out twice before moving on.</li>
+<li>Which slides are meant only as visual cues and are therefore quickly to move away from after they show up? Add another marker, e.g. &quot;=&gt;=&gt;=&gt;&quot; to indicate switching to the next slide quickly.</li>
+</ul></li>
+<li>Now go to the ending of your slides and make sure you have clearly recognizable takeaways for your audience that match your intended high-level solution. The takeaways should be concise and consistent.</li>
+<li>Finally, ensure that you show a slide showing your contact info (name, email, social media handle), conference hash tag and URL to download your slide deck both at the beginning and at the end of your presentation. This slide should be the first slide when you begin and the very last slide visible when you finish.</li>
+</ol>
+<p>After your slide deck is complete and groomed, there only remains one thing to do: practice! I've given talks without dry-runs and got away with it, but each time I knew that my presentation could have been <strong>that</strong> much better. So take the time and practice - your audience will appreciate it.</p>
+<p>When practicing, start a timer to measure if you'll stay within the given time frame. I usually speed up by ~15% while on stage due to nerves. Your nervousness is something to take into account.</p>
+<p>Your amount of slides may also give you a good indicator as to how long your talk is going to be: I have an average pace of two slides per minute. So if, after grooming, my slide deck has ~80 slides, I can be confident to have the right amount of content for a 40 minute presentation.</p>
+<p>And that's it! I'm looking forward to your well-groomed slide decks. Thanks for caring and taking the time to make your audience's learning experience better. Give me feedback <a href="https://twitter.com/tbaldauf">via @tbaldauf</a> if you found this guide helpful or found things to improve.</p>]]></description>
+    </item>
+        <item>
+      <title>HTTP2.0 on localhost with Caddy</title>
+      <link>http://tobias.is/blogging/test-http2-localhost-caddy-ssl</link>
+      <guid>http://tobias.isblogging/test-http2-localhost-caddy-ssl</guid>
+      <pubDate>Mon, 07 Mar 2016 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p><a href="https://http2.github.io/">HTTP2.0</a> is the single greatest improvement in the recent history of web performance optimization. To quickly test its benefits on your local machine, you only need an <a href="https://caddyserver.com/">easy-to-setup HTTP2.0 supporting webserver like Caddy</a> and a self-signed certificate.</p>
+<p>Caddy is an <a href="https://caddyserver.com/download">easy-to-install</a>, <a href="https://github.com/mholt/caddy">open-souce</a> HTTP2.0 server <a href="https://golang.org/">written in Go</a> that is <a href="https://caddyserver.com/docs">well-documented</a>. This makes it ideal for some quick HTTP2.0 testing on your localhost or alongside a running web server.</p>
+<p>For starters, <a href="https://caddyserver.com/download">download the provided Caddy package</a> for your OS and test that you can start in on the commandline by calling &quot;<em>caddy</em>&quot;. Caddy will initiate a web server in the current working directory just like &quot;<em>python -m http.server</em>&quot; or Node's &quot;<em>http-server</em>&quot;.</p>
+<p>To make Caddy serve contents via HTTP2.0, we require a SSL certificate because encryption is <a href="https://http2.github.io/http2-spec/">part of the core spec for HTTP2.0</a>. While Caddy has an <a href="https://caddyserver.com/docs/automatic-https">amazing auto-magical certificate generation process</a> using <a href="https://letsencrypt.org/">Let's Encrypt</a> built-in,  you can't easily receive a certificate for your localhost that way.</p>
+<p>We can create our own, self-signed certificate for HTTP2.0 testing with a single command, however. Just execute:</p>
+<p><code>openssl req -new -newkey rsa:2048 -sha256 -days 365 -nodes -x509 -keyout cert.key -out cert.crt</code></p>
+<p>on your commandline to generate a SSL certificate + key pair. </p>
+<p>Now all we need to do is to tell Caddy to use the self-signed certificate. Create a new file in the working directory you want to serve with HTTP2.0 and call it &quot;<em>Caddyfile</em>&quot;. <a href="https://caddyserver.com/docs/caddyfile">Caddyfiles are configuration files</a> automatically read by Caddy if present.</p>
+<p>Put the following lines into your Caddyfile to make Caddy serve contents via HTTP2.0 using the self-signed certificate:</p>
+<pre><code>localhost:443
+tls cert.crt cert.key</code></pre>
+<p><br>You can read more about this syntax in <a href="https://caddyserver.com/docs/tls">the Caddy documentation on TLS</a>. Now just point your browser to &quot;<em><a href="https://localhost">https://localhost</a></em>&quot;, click through the security warning that you're connecting to a server that's using only a self-signed certificate and enjoy testing your website with HTTP2.0.</p>
+<h3>Update</h3>
+<p>As of version 0.9, Caddy can now create its own self-signed certificates for local testing. See Caddy's <a href="https://caddyserver.com/blog/caddy-0_9-released#easy-self-signed-certificates">blog post for the v0.9 release</a> for details.</p>]]></description>
+    </item>
+        <item>
+      <title>What's in the bag?</title>
+      <link>http://tobias.is/blogging/whats-in-the-bag</link>
+      <guid>http://tobias.isblogging/whats-in-the-bag</guid>
+      <pubDate>Wed, 13 May 2015 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p>Public speaking is my <a href="http://where.tobias.is/">passion and profession</a>. Over time, I've assembled what I think of as my grab n' run speaker's bag. It received positive comments from speakers and event organizers. Here's what's inside that helps you become a well prepped speaker.</p>
+<p>When I approach the stage at a conference before my speaking slot, a common question asked by organizers or the tech crew is &quot;What's in the bag?&quot;. The bag being a ziploc filled with techy goodness. Lifting it to their faces always results in the same response: &quot;Wow! You're well prepared!&quot;.</p>
+<p>Indeed this ziploc bag contains everything I need to give a successful presentation anywhere anytime. That's also the reason why it's all in one container: whenever I leave for an event, I only need to remember to grab one thing besides my laptop to ensure that I can present successfully.</p>
+<p>Here's what is inside:</p>
+<ul>
+<li><strong>Adapters for projectors</strong>: three adapters to deal with any projector - VGA, DVI and HDMI.</li>
+<li><strong>A good clicker</strong>: Body movement on stage is a powerful tool. Having to go to your laptop to forward slides is intolerable. The Logitech R800 is the best clicker I have experienced so far. Good haptics, clear button feeling, no accidental presses and a powerful green laser pointer.</li>
+<li><strong>Reliable USB stick</strong>: Invest in a good USB stick. Conference organizers may ask you for a PDF copy of your slides. Your laptop may spontaneously combust. Keep up-to-date copies of your slide decks and all embedded media on that USB stick - just like in the good old days. Try restoring your slide deck from 'the cloud' over bad conference WiFi once and you'll come to love this old school device.</li>
+<li><strong>LAN cable and USB adapter</strong>: Speaking of old school - conference and hotel WiFi is always a topic of hot discussion. In case you need to update your slide deck in the quiet retreat of your hotel room or you want to publish your deck after your talk (as you should!), having a RJ-45 connection ready is just super handy.</li>
+<li><strong>Reliable WiFi</strong>: The stage is usually at the back of a large room, away from the entrance. WiFi hotspots, especially if installed only temporarily for the duration of the conference, are usually placed outside the room on the corridor - far away from you. If you intent to do a live demo or similar dare requiring a live Internet connection (tip: always assume it fails nontheless!), you need a reliable WiFi device. The antenna and chipset inside MacBooks are ok, but nothing to rely on in a pinch. Invest in a good USB WiFi chipset with strong antenna to get uplink when nobody else does.</li>
+</ul>
+<p>A final tip that's not from my ziploc: if you're comfortable writing MarkDown and working with editors instead of clunky GUIs, a tool like <a href="http://www.decksetapp.com/">DecksetApp</a> enables you to create beautiful slide decks rapidly and in a way that's highly reusable.</p>
+<p>Below you'll find an orderly photo of all the speaking equipment I've listed. Think about what equipment you need before presenting and have contingency plans in place. Be the one thing that conference organizers can always rely upon!</p>]]></description>
+    </item>
+        <item>
+      <title>Progressive JPEG performance optimization</title>
+      <link>http://tobias.is/blogging/progressive-jpeg-performance-optimization</link>
+      <guid>http://tobias.isblogging/progressive-jpeg-performance-optimization</guid>
+      <pubDate>Wed, 12 Jun 2013 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p>A side by side comparison of jpegtran &amp; jpegrescan: how to efficiently compress lossless progressive JPEGs in the light of <a href="http://calendar.perfplanet.com/2012/progressive-jpegs-a-new-best-practice/">progressive JPEGs being a better pick for UX &amp; their advantages on mobile connections</a>, the fact that <a href="http://blog.patrickmeenan.com/2013/06/progressive-jpegs-ftw.html">WebPagetest now urges you to deliver progressive JPEGs</a> because only <a href="https://twitter.com/tbaldauf/status/342898788735803392">~7% of all JPEGs on the web are progressive</a> and image bytesize being The New Black in the <a href="http://timkadlec.com/2013/06/why-we-need-responsive-images/">context of responsive images</a>.</p>
+<p><a href="http://en.wikipedia.org/wiki/Libjpeg">JPEGtran</a> is a well-known part of libjpeg and thus available in most *nix systems. It is used to optimize <a href="http://en.wikipedia.org/wiki/Huffman_coding">Huffman tables</a>, strip meta-data and make JPEGs progressive. <a href="http://github.com/kud/jpegrescan">JPEGrescan</a>, originally written by Lorren Merritt of x264 and now also a part of <a href="http://imageoptim.com/">ImageOptim</a>, is a Perl script that uses JPEGtran at its core, but feeds alternating <a href="http://svn.ghostscript.com/ghostscript/tags/jpeg-7/wizard.txt">scan sequence numbers to the progressive JPEG creation</a> process in order to find the smallest possible bytesize. Thus, it's safe to say that JPEGrescan extends lossless JPEG compression functionality much the same way as <a href="http://github.com/technopagan/adept-jpg-compressor">Adept extends lossy JPEG compression functionality</a>.</p>
+<p>To test the validity of the hypothesis that JPEGrescan enables us to achieve superior results in lossless JPEG compression, <a href="http://github.com/technopagan/adept-jpg-compressor/blob/master/imagesampler.sh">I created a sample of 32.767 random JPEGs</a> publicly available on websites indexed by <a href="http://httparchive.org/">HTTP Archive</a>. If you're looking to recreate this exact sample, <a href="http://assets.tobias.is/image_urls_sample.txt">have a look at this file which contains the entire set of image URLs</a> used by curl to retrieve the images.</p>
+<p>After creating this sample of ~754MB in total bytesize, I ran JPEGtran &amp; JPEGrescan on the source sample, taking care to use identical switches as JPEGrescan has some switches for JPEGtran hardcoded:</p>
+<p>jpegtran -copy none -optimize -progressive -outfile $outfile $infile<br />
+jpegrescan -q -s $infile $outfile</p>
+<p>Afterwards, I calculated the total bytesize of the respective outputs: 634MB for JPEGtran and 626MB for JPEGrescan. In relative terms this translates to 1.2% bytesize savings using JPEGrescan over JPEGtran.<br />
+JPEGrescan compresses progressive JPEGs 1.2% more efficiently than vanilla JPEGtran</p>
+<p>Be aware, however, that it does not mean savings of 120MB alone by using JPEGtran on the source sample as the source contains partially defective JPEGS and files marked as .jpg which aren't JPEGs at all. Both JPEGtran and JPEGrescan threw errors iterating on these files and thus did not save them in their ouput directories. The sum of all sucessfully processed JPEGs from the 32767 images source sample was 28320. Thus, it is safe to compare the results of JPEGtran to those of JPEGrescan &amp; vice versa, but it is not safe to compare any of the two results to the source sample.</p>
+<p>As JPEGrescan is a Perl script, which prevents people on managed or shared hosting environments to make use of it and as it lacks a maintainer, I will rewrite the core functionality of JPEGrescan, namely testing scan sequence numbers during progressive JPEG creation for optimal bytesize results, in PHP to resolve these issues.</p>]]></description>
+    </item>
+        <item>
+      <title>Cross-Browser CSS Technique for SVG Sprites with PNG Fallback</title>
+      <link>http://tobias.is/blogging/cross-browser-css-technique-for-svg-sprites-with-png-fallback</link>
+      <guid>http://tobias.isblogging/cross-browser-css-technique-for-svg-sprites-with-png-fallback</guid>
+      <pubDate>Wed, 22 May 2013 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p>We have crossed the 300DPI mark and came up with all kinds of wicked ways for responsive images. SVG is a strong contender, but its ubiquitous usage has been hindered by the lack of legacy browser support. So let's learn to deploy SVG with a safe PNG fallback.</p>
+<p>SVG sprites are amazing: when created with <a href="http://inkscape.org/">the right tools</a> and <a href="http://codedread.com/scour/">deployed correctly</a>, they can be even smaller in file size than PNG8 while being infinitely scalable. It's a responsive Web-Designer's dream.</p>
+<p>Sadly, required support for legacy browsers often forces us to resort to least common denominators. Yet we should refrain from using a 50kb JS library for feature detection or a 100kb JS library to add unsupported features. A simple CSS trick for progressive enhancement can safe the day.</p>
+<p><strong>A safe-to-deploy method including IE6+7</strong></p>
+<p>Legacy browsers such as IE6+7 cannot process RGBA color values in CSS. So when we combine a CSS background shorthand declaration containing RGBA with a URL to a SVG sprite, legacy browsers will not load it. They will resort to the prior rule of a PNG fallback version of the sprite.</p>
+<p><strong>The CSS code snippet</strong></p>
+<script src="https://gist.github.com/4215254.js"></script>]]></description>
+    </item>
+        <item>
+      <title>To Boldly Monitor What No One Has Monitored Before</title>
+      <link>http://tobias.is/blogging/to-boldly-monitor-what-no-one-has-monitored-before</link>
+      <guid>http://tobias.isblogging/to-boldly-monitor-what-no-one-has-monitored-before</guid>
+      <pubDate>Fri, 14 Dec 2012 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p>In the <a href="http://calendar.perfplanet.com/2012/using-nginx-php-fpmapc-and-varnish-to-make-wordpress-websites-fly/">Performance Advent Calendar I described</a> how to setup a high performance webserver. As a follow-up, let's look into monitoring this setup to automagically restart unresponsive services such as NGINX, PHP5-FPM and Varnish to minimize downtime.</p>
+<p>We'll be <a href="http://mmonit.com/monit/">using Monit on Debian</a> because of its easy syntax. Go ahead and install Monit using your favorite package management tool.</p>
+<p>After successful installation, Monit will tell you that you will need to configure it and then enable it to begin monitoring. Let's do that now: open /etc/monit/monitrc and configure it like this:</p>
+<script src="https://gist.github.com/4286696.js?file=monitrc"></script>
+<p>The nifty bits are how to check for service health: for <a href="http://www.nginx.org/">NGINX</a>, we can simply check to get a static file on port 8080, and for <a href="http://en.wikipedia.org/wiki/Varnish_%28software%29">Varnish</a> on port 80. However, checking for the actual health of PHP can be tricky.</p>
+<p>To monitor the stack's capacity of processing PHP code, we'll enable PHP-FPM's ping path: in your /etc/php5/fpm/pool.d/www.conf uncomment the line ping.path = /ping.</p>
+<p>Next, configure NGINX so that it knows how to handle the new /ping location:</p>
+<script src="https://gist.github.com/4286696.js?file=yourdomain.tld"></script>
+<p>Now, Monit can successfully request '/ping' as long as PHP is up &amp; running.</p>
+<p>If any of the monitored services becomes unavailable, Monit will restart it. Group settings ensure a cascade of NGINX =&gt; PHP-FPM =&gt; Varnish. If a service becomes unresponsive too often, you will be notified by email.</p>]]></description>
+    </item>
+    
+  </channel>
+</rss>

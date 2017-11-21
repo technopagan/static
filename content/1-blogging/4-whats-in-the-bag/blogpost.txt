@@ -1,0 +1,26 @@
+Title: What's in the bag?
+
+----
+
+Text:
+
+Public speaking is my (link: http://where.tobias.is/ text: passion and profession). Over time, I've assembled what I think of as my grab n' run speaker's bag. It received positive comments from speakers and event organizers. Here's what's inside that helps you become a well prepped speaker.
+
+When I approach the stage at a conference before my speaking slot, a common question asked by organizers or the tech crew is "What's in the bag?". The bag being a ziploc filled with techy goodness. Lifting it to their faces always results in the same response: "Wow! You're well prepared!".
+
+Indeed this ziploc bag contains everything I need to give a successful presentation anywhere anytime. That's also the reason why it's all in one container: whenever I leave for an event, I only need to remember to grab one thing besides my laptop to ensure that I can present successfully.
+
+Here's what is inside:
+- **Adapters for projectors**: three adapters to deal with any projector - VGA, DVI and HDMI.
+- **A good clicker**: Body movement on stage is a powerful tool. Having to go to your laptop to forward slides is intolerable. The Logitech R800 is the best clicker I have experienced so far. Good haptics, clear button feeling, no accidental presses and a powerful green laser pointer.
+- **Reliable USB stick**: Invest in a good USB stick. Conference organizers may ask you for a PDF copy of your slides. Your laptop may spontaneously combust. Keep up-to-date copies of your slide decks and all embedded media on that USB stick - just like in the good old days. Try restoring your slide deck from 'the cloud' over bad conference WiFi once and you'll come to love this old school device.
+- **LAN cable and USB adapter**: Speaking of old school - conference and hotel WiFi is always a topic of hot discussion. In case you need to update your slide deck in the quiet retreat of your hotel room or you want to publish your deck after your talk (as you should!), having a RJ-45 connection ready is just super handy.
+- **Reliable WiFi**: The stage is usually at the back of a large room, away from the entrance. WiFi hotspots, especially if installed only temporarily for the duration of the conference, are usually placed outside the room on the corridor - far away from you. If you intent to do a live demo or similar dare requiring a live Internet connection (tip: always assume it fails nontheless!), you need a reliable WiFi device. The antenna and chipset inside MacBooks are ok, but nothing to rely on in a pinch. Invest in a good USB WiFi chipset with strong antenna to get uplink when nobody else does.
+
+A final tip that's not from my ziploc: if you're comfortable writing MarkDown and working with editors instead of clunky GUIs, a tool like (link: http://www.decksetapp.com/ text: DecksetApp) enables you to create beautiful slide decks rapidly and in a way that's highly reusable.
+
+Below you'll find an orderly photo of all the speaking equipment I've listed. Think about what equipment you need before presenting and have contingency plans in place. Be the one thing that conference organizers can always rely upon!
+
+----
+
+Date: 2015-05-13

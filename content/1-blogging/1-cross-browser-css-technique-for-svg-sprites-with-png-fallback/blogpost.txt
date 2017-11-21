@@ -1,0 +1,23 @@
+Title: Cross-Browser CSS Technique for SVG Sprites with PNG Fallback
+
+----
+
+Text:
+
+We have crossed the 300DPI mark and came up with all kinds of wicked ways for responsive images. SVG is a strong contender, but its ubiquitous usage has been hindered by the lack of legacy browser support. So let's learn to deploy SVG with a safe PNG fallback.
+
+SVG sprites are amazing: when created with (link: http://inkscape.org/ text: the right tools) and (link: http://codedread.com/scour/ text:deployed correctly), they can be even smaller in file size than PNG8 while being infinitely scalable. It's a responsive Web-Designer's dream.
+
+Sadly, required support for legacy browsers often forces us to resort to least common denominators. Yet we should refrain from using a 50kb JS library for feature detection or a 100kb JS library to add unsupported features. A simple CSS trick for progressive enhancement can safe the day.
+
+**A safe-to-deploy method including IE6+7**
+
+Legacy browsers such as IE6+7 cannot process RGBA color values in CSS. So when we combine a CSS background shorthand declaration containing RGBA with a URL to a SVG sprite, legacy browsers will not load it. They will resort to the prior rule of a PNG fallback version of the sprite.
+
+**The CSS code snippet**
+
+(gist: https://gist.github.com/4215254)
+
+----
+
+Date: 2013-05-22

@@ -1,0 +1,16 @@
+tobias.is:443 {
+	tls cert.crt cert.key
+	header / Cache-Control "no-cache, no-store, must-revalidate"
+	header / Pragma "no-cache, no-store"
+	gzip
+	root /var/www/tobias.is/nifty/http2hero
+}
+
+2nd.tobias.is:443 {
+        tls cert.crt cert.key
+        header / Cache-Control "no-cache, no-store, must-revalidate"
+        header / Pragma "no-cache, no-store"
+        gzip
+        root /var/www/tobias.is/nifty/http2hero
+}
+

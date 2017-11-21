@@ -1,0 +1,5 @@
+shimmercat-devlove:
+  domains:
+    tobias.is:
+        root-dir: http2hero
+

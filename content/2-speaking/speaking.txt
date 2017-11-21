@@ -1,0 +1,247 @@
+Title: Speaking
+
+----
+
+Text: I'm a (link: http://who.tobias.is/ text: web performance evangelist &amp; keynote speaker). If you want me to speak, (link: http://tobias.is/speaking/info/ text: please check out my speaker info page).
+
+> "Tobias is one of the best presenters I've ever seen."
+> <cite>– Andrew Heifetz, Manager Technical Education and Enablement Team at Akamai</cite>
+
+<b class="rainbowtext">Please note that due to the current political situation in the USA, I do not accept speaking engagements there at this time.</b>
+
+----
+
+Events: 
+
+**04.-07.04.2017**
+Keynote (link: http://tobias.is/speaking/# text: Images And Akamai),
+three sessions on (link: http://tobias.is/speaking/# text: Investigating Web Performance Data)<br>and one (link: http://tobias.is/speaking/# text: Image Optimization Deep-Dive)
+at (link: https://www.akamai.com/us/en/services-support/akamai-university-training.jsp text: Akamai University - Krakow)
+
+**07.-08.11.2016**
+(link: http://www.highload.ru/2016/abstracts/2401.html text: Your Hero Images Need You! Save the Day with HTTP2 Image Loading)
+at (link: http://highload.co/ text: HighLoad++ 2016 - Moscow)
+(link: https://speakerdeck.com/tbaldauf/your-hero-images-need-you-save-the-day-with-http2-image-loading-highload-plus-plus-2016 text: Slides →) and (link: https://www.youtube.com/watch?v=Qmzk7uQAXiw text: Video [53:00] →)
+
+**17.-21.10.2016**
+(link: https://edge.akamai.com/ec/us/sessions-training/session-schedule.jsp?f1=Developer%20Track text: Your Hero Images Need You! Save the Day with HTTP2 Image Loading)<br>and (link: https://edge.akamai.com/ec/us/sessions-training/session-schedule.jsp?f1=Developer%20Track text: PWAs + Akamai = BFFs 4ever)
+at (link: https://edge.akamai.com/ text: Akamai Edge Conference 2016 - San Francisco)
+(link: https://speakerdeck.com/tbaldauf/your-hero-images-need-you-save-the-day-with-http2-image-loading-akamai-edge-conference-2016 text: Slides →) and (link: https://edge.akamai.com/ec/us/highlights/developer-track-videos.jsp#edge_2016_dev_track_your_images_need_you text: Video [41:00] →)
+
+**22.09.2016**
+(link: https://www.meetup.com/wwruhr/events/233492651/ text: Your Hero Images Need You! Save the Day with HTTP2 Image Loading)
+at (link: https://twitter.com/wwruhr/ text: WWRuhr - Essen)
+(link: https://speakerdeck.com/tbaldauf/your-hero-images-need-you-save-the-day-with-http2-image-loading-90min-workshop-at-velocity-santa-clara-2016 text: Slides →)
+
+**21.-23.06.2016**
+(link: http://conferences.oreilly.com/velocity/devops-web-performance-ca/public/schedule/detail/50046 text: Your Hero Images Need You! Save the Day with HTTP2 Image Loading)
+at (link: http://conferences.oreilly.com/velocity/devops-web-performance-ca/ text: Velocity Conference 2016 - Santa Clara)
+(link: https://speakerdeck.com/tbaldauf/your-hero-images-need-you-save-the-day-with-http2-image-loading-90min-workshop-at-velocity-santa-clara-2016 text: Slides →) and (link: https://www.youtube.com/watch?v=66JINbkBYqw text: Video [81:00] →)
+(link: http://conferences.oreilly.com/velocity/devops-web-performance-ca/public/schedule/detail/50046 text: ★★★★★ [4.5] title: rated by attendees)
+
+**09.06.2016**
+(link: http://www.devtalks.ro/bucharest/events/your-hero-images-need-you-save-the-day-with-http2-image-loading/ text: Your Hero Images Need You! Save the Day with HTTP2 Image Loading)
+at (link: http://www.devtalks.ro/bucharest text: DevTalks 2016 - Bucharest)
+(link: https://speakerdeck.com/tbaldauf/your-hero-images-need-you-save-the-day-with-http2-image-loading-devtalks-bucharest-2016 text: Slides →) and (link: https://www.youtube.com/watch?v=qULBBBVAFMYw text: Video [23:00] →)
+
+**13.05.2016**
+(link: http://tobias.is/speaking/# text: The Web Experience)
+at (link: http://www.akamai.de/ text: Akamai Tech Day - Munich)
+
+**09.-10.05.2016**
+(link: https://beyondtellerrand.com/events/duesseldorf-2016/speakers/tobias-baldauf text: Your Hero Images Need You! Save the Day with HTTP2 Image Loading)
+at (link: http://beyondtellerrand.com/ text: beyondtellerrand 2016 - Düsseldorf)
+(link: https://speakerdeck.com/tbaldauf/your-hero-images-need-you-save-the-day-with-http2-image-loading-1 text: Slides →) and (link: https://vimeo.com/166145048 text: Video [34:00] →)
+
+**01.04.2016**
+(link: http://fronteers.nl/congres/2016-spring/sessions#tobias-baldauf text: Your Hero Images Need You! Save the Day with HTTP2 Image Loading)
+at (link: http://fronteers.nl/congres/2016-spring text: Fronteers Spring)
+(link: http://speakerdeck.com/tbaldauf/your-hero-images-need-you-save-the-day-with-http2-image-loading text: Slides →) and (link: https://vimeo.com/163113212 text: Video [21:00] →)
+
+**28.01.2016**
+(link: # text: High Performance Images)
+at (link: http://www.meetup.com/de-DE/cologne-germany-high-performance-website-optimization-group/ text: Cologne Web Performance Meetup)
+(link: http://speakerdeck.com/tbaldauf/high-performance-images-internetdagarna-stockholm-2015-20151123 text: Slides →)
+
+**23.11.2015**
+(link: http://internetdagarna.se/program/faster_than_lightning/ text: High Performance Images)
+at (link: http://internetdagarna.se/english/ text: Internetdagarna 2015 - Stockholm)
+(link: http://speakerdeck.com/tbaldauf/high-performance-images-internetdagarna-stockholm-2015-20151123 text: Slides →) and (link: http://www.youtube.com/watch?v=j5sRzAOt4nE text: Video [50:00] →)
+
+**02.11.2015**
+[High Performance Images](http://www.meetup.com/de/PerfUG/events/)
+at (link: http://www.meetup.com/de/PerfUG/ text: Paris Performance User Group)
+(link: http://speakerdeck.com/tbaldauf/high-performance-images-paris-perfug-meetup-20151102 text: Slides →) and (link: http://octo.ubicast.tv/permalink/v1253d261b68d6fv884d/ text: Video [63:00] →)
+
+**31.10.2015**
+[High Performance Images](http://www.webperfdays.org/events/2015-amsterdam/schedule.html)
+at (link: http://www.webperfdays.org/events/2015-amsterdam/ text: WebPerfDays Amsterdam 2015)
+(link: http://speakerdeck.com/tbaldauf/high-performance-images-berlin-webperf-meetup-20151027 text: Slides →)
+
+**27.10.2015**
+[High Performance Images](http://www.meetup.com/de/Berlin-Web-Performance-Group/events/225722896/)
+at (link: http://www.meetup.com/de/Berlin-Web-Performance-Group text: Berlin Web Performance Meetup)
+(link: http://speakerdeck.com/tbaldauf/high-performance-images-berlin-webperf-meetup-20151027 text: Slides →)
+
+**28.08.2015**
+(link: http://frontinamsterdam.nl/#Schedule text: High Performance Images)
+at (link: http://frontinamsterdam.nl/ text: Front In Amsterdam 2015)
+(link: http://speakerdeck.com/tbaldauf/high-performance-images-front-in-amsterdam-2015 text: Slides →)
+
+**22.08.2015**
+(link: http://programm.froscon.de/2015/events/1601.html text: The JPEG is dead! Long live the JPEG!)
+at (link: https://www.froscon.de/en/home/ text: FrOSCon 2015)
+(link: http://speakerdeck.com/tbaldauf/froscon-2015-the-jpeg-is-dead-long-live-the-jpeg text: Slides →) and (link: http://www.youtube.com/watch?v=i2YEV__jxzA text: Video [52:00] →)
+(link: http://frab.froscon.org/en/froscon2015/public/events/1601/feedback/new text: ★★★★★ [4.6] title: rated by attendees)
+
+**22.04.2015**
+(link: http://2015.industryconf.com/talks/#tobias text: High Performance Images)
+at (link: http://2015.industryconf.com/ text: IndustryConf 2015 Newcastle)
+(link: http://speakerdeck.com/tbaldauf/advanced-image-compression-techniques-industryconf-2015 text: Slides →) and (link: http://www.youtube.com/watch?v=g6PVY7RsfEw text: Video [26:00] →)
+
+**26.03.2015**
+(link: http://tobias.is/speaking/# text: The Psychology Of Speed)
+at (link: http://www.akamai.de/ text: Akamai Tech Day - Stockholm)
+(link: http://speakerdeck.com/tbaldauf/the-psychology-of-speed text: Slides →)
+
+**25.03.2015**
+(link: http://tobias.is/speaking/# text: High Performance Images)
+at (link: http://www.meetup.com/Stockholm-Web-Performance-Group/ text: WebPerf Meetup - Stockholm)
+
+**24.03.2015**
+(link: http://www.webbdagarna.se/stockholm-2015/startsida text: Responsive Webdesign Best Practices)
+at (link: http://www.webbdagarna.se/english text: Webbdagarna 2015 - Stockholm)
+
+**12.03.2015**
+(link: http://tobias.is/speaking/# text: Responsive Webdesign Best Practices)
+at (link: http://content.akamai.com/ME1210-RWDWorkshop.html text: Akamai RWD Workshop - Munich)
+
+**05.02.2015**
+(link: http://speakerdeck.com/tbaldauf/the-psychology-of-speed text: The Psychology Of Speed)
+at (link: http://www.akamai.de/ text: Akamai Conference)
+(link: http://speakerdeck.com/tbaldauf/the-psychology-of-speed text: Slides →)
+
+**20.11.2014**
+(link: http://www.webperfdays.org/events/2014-barcelona/index.html text: High Performance JPEGs, PNGs and SVG)
+at (link: http://www.webperfdays.org/events/2014-barcelona/index.html text: WebPerfDays - Barcelona)
+(link: http://speakerdeck.com/tbaldauf/advanced-image-compression-techniques-velocityconf-barcelona-november-2014 text: Slides →)
+
+**19.11.2014**
+(link: http://velocityconf.com/velocityeu2014/public/schedule/detail/36910 text: Advanced Image Compression Techniques) and (link: http://velocityconf.com/velocityeu2014/public/schedule/detail/38983 text: O'Reilly Office Hours)
+at (link: http://velocityconf.com/velocityeu2014/ text: Velocity Conference 2014 - Barcelona)
+(link: http://speakerdeck.com/tbaldauf/advanced-image-compression-techniques-velocityconf-barcelona-november-2014 text: Slides →) and (link: http://www.youtube.com/watch?v=vCHkpxPP6Es text: Videos [77:00] →)
+(link: http://velocityconf.com/velocityeu2014/public/schedule/detail/36910 text: ★★★★★ [4.6] title: rated by attendees)
+
+**11.10.2014**
+(link: http://www.webperfdays.org/events/2014-amsterdam/schedule.html text: Image Optimization & Compression)
+at (link: http://www.webperfdays.org/events/2014-amsterdam/index.html text: WebPerfDays - Amsterdam)
+(link: http://speakerdeck.com/tbaldauf/advanced-image-compression-techniques-webperfdays-amsterdam-october-2014 text: Slides →)
+
+**01.07.2014**
+(link: http://2014.enterjs.de/abstracts#neue-bildkompressionsverfahren-fuer-optimale-webseiten-performance text: Advanced Image Compression Techniques)
+at (link: http://2014.enterjs.de/ text: EnterJS Conf - Cologne)
+(link: http://speakerdeck.com/tbaldauf/advanced-image-compression-velocity-conference-santa-clara-oreilly-2014 text: Slides →)
+
+**24.06.2014**
+(link: http://velocityconf.com/velocity2014/public/schedule/detail/35128 text: Advanced Image Compression Techniques) and (link: http://velocityconf.com/velocity2014/public/schedule/detail/36913 text: O'Reilly Office Hours)
+at (link: http://velocityconf.com/velocity2014/ text: Velocity Conference 2014 - Santa Clara, California)
+(link: http://speakerdeck.com/tbaldauf/advanced-image-compression-velocity-conference-santa-clara-oreilly-2014 text: Slides →) and (link: http://www.youtube.com/watch?v=J-OLWjrC3z0 text: Video [82:00] →)
+
+**24.04.2014**
+(link: http://www.feopsconf.com/scheduled-presentations/ text: Web Performance Engineers - Hunt for the Mythical Beast)
+at (link: http://www.feopsconf.com/ text: FrontEndOps Conf - San Francisco, California)
+(link: http://speakerdeck.com/tbaldauf/web-performance-engineers-hunt-for-the-mythical-beast text: Slides →) and (link: http://www.youtube.com/watch?v=dnLFY1uyBkY text: Video [24:00] →)
+
+**01.04.2014**
+(link: http://environmentsforhumans.com/2014/responsive-web-design-summit/ text: Measuring Mobile Web Performance)
+at (link: http://environmentsforhumans.com/2014/ text: Responsive Webdesign Summit)
+(link: http://speakerdeck.com/tbaldauf/mobile-web-performance-testing text: Slides →)
+
+**20.03.2014**
+(link: http://mobiletechcon.de/2014se/sessions/mobile-web-performance-testing-responsive-web-experts-day text: Mobile Web Performance Testing) and (link: http://mobiletechcon.de/2014se/sessions/abschlusspanel-responsive-web-experts-day text: Expert Panel Discussion)
+at (link: http://mobiletechcon.de/2014se/ text: Mobile Tech Conference - Munich)
+(link: http://speakerdeck.com/tbaldauf/mobile-web-performance-testing text: Slides →)
+
+**16.02.2014**
+(link: http://workingdraft.de/158/ text: Rendering Performance, Phantomas, HTTP Archive & Performance Budgets)
+at (link: http://workingdraft.de/ text: Working Draft Podcast)
+
+**13.11.2013**
+(link: http://velocityconf.com/velocityeu2013/public/schedule/detail/31529 text: Hands-on Web Performance Optimization Workshop)
+at (link: http://velocityconf.com/velocityeu2013/ text: Velocity EU 2013) with (link: http://andydavies.me/about/ text: Andy Davies)
+(link: http://speakerdeck.com/tbaldauf/velocity-2013-hands-on-web-performance-workshop text: Slides →)
+
+**25.10.2013**
+(link: https://border-none.net/2013/#baldauf text: Mobile Performance Patterns)
+at (link: https://border-none.net/2013/ text: border: none 2013)
+(link: http://speakerdeck.com/tbaldauf/measuring-mobile-web-performance text: Slides →)
+
+**24.10.2013**
+(link: http://ux-day.de/von-performance-ladezeiten-ux-designtobias-baldauf/ text: Web Performance Optimization & User Experience Design)
+at (link: http://ux-day.de/ text: UX Day 2013)
+(link: http://speakerdeck.com/tbaldauf/web-performance-and-the-psychology-of-speed text: Slides →)
+
+**26.09.2013**
+(link: https://plus.google.com/115888413548938267810/posts text: Web Performance Optimization)
+at (link: http://plus.google.com/u/0/115888413548938267810/posts text: WWRuhr)
+(link: http://speakerdeck.com/tbaldauf/web-performance-and-the-psychology-of-speed text: Slides →)
+
+**29.08.2013**
+(link: http://www.facebook.com/photo.php?fbid=477724672323460&set=a.457898827639378.1073741828.437217009707560&type=1&relevant_count=1 text: Meet4Speed)
+at (link: http://coworkingnight.chiligum.com/ text: Coworking Night) with (link: http://twitter.com/derSchepp text: Christian Schäfer) & (link: http://www.webzwom.de/ text: Manuel Meinhard)
+
+**24.08.2013 – 25.08.2013**
+(link: http://programm.froscon.org/2013/events/1207.html text: Web Performance Optimization Automation)
+at (link: http://www.froscon.de/en/ text: FrOSCon – Free and Open Source Software Conference)
+(link: http://speakerdeck.com/tbaldauf/automating-web-performance-optimization text: Slides →)
+
+**27.05.2013 – 28.05.2013**
+(link: http://2013.beyondtellerrand.com/developer-garden-stage/ text: Advanced Image Optimization with Adept)
+at (link: http://2013.beyondtellerrand.com/developer-garden-stage/ text: beyond tellerrand conference – Developer Garden Stage)
+
+**18.05.2013**
+(link: http://www.webperfdays.org/events/2013-amsterdam/schedule.html text: WebPerf & Image Optimization)
+at (link: http://www.webperfdays.org/ text: WebPerfDays Amsterdam)
+(link: http://speakerdeck.com/tbaldauf/image-optimization-methodology text: Slides →)
+
+**13.05.2013 – 14.05.2013**
+(link: http://atmosphere-conference.com/en/lecture/34/ text: Automating Web Performance Optimization)
+at (link: http://atmosphere-conference.com/ text: Atmosphere Conference)
+(link: http://speakerdeck.com/tbaldauf/automating-web-performance-optimization text: Slides →) and (link: http://www.youtube.com/watch?v=XKnfZltJuEA text: Video [45:00] →)
+
+**17.04.2013**
+(link: http://www.startplatz.de/event/web-performance-workshop/ text: Web Performance Workshop)
+at (link: http://www.startplatz.de/ text: STARTPLATZ)
+
+**16.04.2013**
+(link: http://speakerdeck.com/tbaldauf/image-optimization-methodology text: Image Optimization Methodology)
+at (link: http://environmentsforhumans.com/2013/responsive-web-design-summit/ text: Responsive Web Design Summit 2013)
+(link: http://speakerdeck.com/tbaldauf/image-optimization-methodology text: Slides →)
+
+**14.02.2013**
+(link: http://speakerdeck.com/tbaldauf/web-performance-optimization-user-experience-design text: Web Performance Optimization is User Experience Design)
+at (link: http://webworker-nrw.de/ text: WWNRW)
+(link: http://speakerdeck.com/tbaldauf/web-performance-optimization-user-experience-design text: Slides →)
+
+**26.05.2012**
+(link: http://www.meetup.com/cologne-germany-high-performance-website-optimization-group/events/60538152/ text: 
+CSS Selector Performance)
+at (link: http://www.meetup.com/cologne-germany-high-performance-website-optimization-group/events/past/?scroll=true#past text: CGNWebPerf)
+(link: http://speakerdeck.com/tbaldauf/web-performance-css-selectors text: Slides →)
+
+**26.01.2012**
+(link: http://www.meetup.com/cologne-germany-high-performance-website-optimization-group/events/44724302/ text: 
+Image Optimizations for Web Performance)
+at (link: http://www.meetup.com/cologne-germany-high-performance-website-optimization-group/events/past/?scroll=true#past text: CGNWebPerf)
+(link: http://speakerdeck.com/tbaldauf/web-performance-image-optimizations text: Slides →)
+
+**19.04.2010**
+(link: http://sg-muenster.gi.de/veranstaltungen.html text: 
+Web Performance Optimization Primer)
+at (link: http://sg-muenster.gi.de/ text: Gesellschaft für Informatik - Universität Münster)
+(link: http://speakerdeck.com/tbaldauf/web-performance-optimization-primer text: Slides →)
+
+**24.09.2009**
+(link: http://ccc.de/de/updates/2009/events/c4-openchaos text: High Performance Websites)
+at (link: http://koeln.ccc.de/ text: Chaos Computer Club Cologne - Open Chaos)
+(link: http://speakerdeck.com/tbaldauf/high-performance-websites text: Slides →)

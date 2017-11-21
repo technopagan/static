@@ -1,0 +1,37 @@
+Title: HTTP2.0 on localhost with Caddy
+
+----
+
+Date: 2016-03-07
+
+----
+
+Text: 
+
+(link: https://http2.github.io/ text: HTTP2.0) is the single greatest improvement in the recent history of web performance optimization. To quickly test its benefits on your local machine, you only need an (link: https://caddyserver.com/ text: easy-to-setup HTTP2.0 supporting webserver like Caddy) and a self-signed certificate.
+
+Caddy is an (link: https://caddyserver.com/download text: easy-to-install), (link: https://github.com/mholt/caddy text: open-souce) HTTP2.0 server (link: https://golang.org/ text: written in Go) that is (link: https://caddyserver.com/docs text: well-documented). This makes it ideal for some quick HTTP2.0 testing on your localhost or alongside a running web server.
+
+For starters, (link: https://caddyserver.com/download text: download the provided Caddy package) for your OS and test that you can start in on the commandline by calling "*caddy*". Caddy will initiate a web server in the current working directory just like "*python -m http.server*" or Node's "*http-server*".
+
+To make Caddy serve contents via HTTP2.0, we require a SSL certificate because encryption is (link: https://http2.github.io/http2-spec/ text: part of the core spec for HTTP2.0). While Caddy has an (link: https://caddyserver.com/docs/automatic-https text: amazing auto-magical certificate generation process) using (link: https://letsencrypt.org/ text: Let's Encrypt) built-in,  you can't easily receive a certificate for your localhost that way.
+
+We can create our own, self-signed certificate for HTTP2.0 testing with a single command, however. Just execute:
+
+```openssl req -new -newkey rsa:2048 -sha256 -days 365 -nodes -x509 -keyout cert.key -out cert.crt```
+
+on your commandline to generate a SSL certificate + key pair. 
+
+Now all we need to do is to tell Caddy to use the self-signed certificate. Create a new file in the working directory you want to serve with HTTP2.0 and call it "*Caddyfile*". (link: https://caddyserver.com/docs/caddyfile text: Caddyfiles are configuration files) automatically read by Caddy if present.
+
+Put the following lines into your Caddyfile to make Caddy serve contents via HTTP2.0 using the self-signed certificate:
+
+```
+localhost:443
+tls cert.crt cert.key
+```
+<br>You can read more about this syntax in (link: https://caddyserver.com/docs/tls text: the Caddy documentation on TLS). Now just point your browser to "*https://localhost*", click through the security warning that you're connecting to a server that's using only a self-signed certificate and enjoy testing your website with HTTP2.0.
+
+### Update 
+
+As of version 0.9, Caddy can now create its own self-signed certificates for local testing. See Caddy's (link: https://caddyserver.com/blog/caddy-0_9-released#easy-self-signed-certificates text: blog post for the v0.9 release) for details.

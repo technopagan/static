@@ -1,0 +1,90 @@
+Title: Even Faster Images using HTTP2 and Progressive JPEGs
+
+----
+
+Date: 2017-01-12
+
+----
+
+DontListImages: true
+
+----
+
+Text:
+
+This article, a summary of my progressive JPEG optimization research, is a cross-post of my contribution to the 2016 edition of [the Web Performance Advent Calendar](https://calendar.perfplanet.com/). For the original post and its comments, please check out [the initial publication page](https://calendar.perfplanet.com/2016/even-faster-images-using-http2-and-progressive-jpegs/). 
+
+**tl;dr:** Progressive images render faster on HTTP2, thus increasing perceived performance. Take control of progressive JPEG’s scan layers to show meaningful image content with only 25% of image data sent. Use HTTP2 Server Push for progressive JPEG scan layers to maximize rendering performance for key images.
+
+## We Have An Image Problem
+[![Engaging, enraging and encouraging images](/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/01-engage-enrage-encourage_compressed.jpg)](/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/engage-enrage-encourage_compressed.jpg) Images make the world go round: they engage, enrage & encourage us. The web as we know it depends on images. This comes at a price: [images make up ~65% of average total bytes per page](http://httparchive.org/interesting.php#bytesperpage) and have a [high correlation to page load time](http://httparchive.org/interesting.php#onLoad) as well as [the Speed Index](http://httparchive.org/interesting.php#SpeedIndex). They also [grow by ~200kb year after year](http://httparchive.org/trends.php#bytesImg&reqImg). In short, images are heavy and make things slow.
+
+## Get Compressin’!
+
+[![HTTP Archive Statistics](/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/httparchive-201605-images-overview.png)](/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/httparchive-201605-images-overview.png) The best way to counter negative effects of loading image assets is image compression: using tools such as [Kornel Lesiński](https://kornel.ski/)‘s [ImageOptim](https://imageoptim.com/), which utilizes great libraries like [mozjpeg](https://github.com/mozilla/mozjpeg) and [pngquant](https://pngquant.org/), we can reduce image byte size without sacrificing visual quality. And thanks to libraries such as [DSSIM](https://github.com/pornel/dssim/) we can ensure good visual quality testing different compression levels.
+
+The bad news is that even after reducing image byte size [by an average ~29% per image](https://www.youtube.com/watch?v=j5sRzAOt4nE) using above tools [and even making use of other image formats such as WebP](https://calendar.perfplanet.com/2015/immaculate-imagery-with-lazy-pictures-bpg/), images are still likely to be the single largest asset type on any given website – closely followed by JavaScript. We need a way to deliver these crucial components for emotional engagement faster.
+
+## Enter Multiplexing
+
+[![HTTP2 Multiplexing Diagram](/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/http2-resource-prioritization.png)](/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/http2-resource-prioritization.png) Part of the solution comes from a popular area of the performance conundrum: HTTP2\. One of its main benefits is “Multiplexing”: the ability to handle multiple requests and responses at the same time, all using the same TCP connection.
+
+With Multiplexing, website assets load faster. Depending on site architecture, you can also prioritize resources inside a multiplexed connection: flagging assets such as critical CSS with high priority in HTTP2 will make them load sooner. On top of this, pushing not yet requested but crucial assets via HTTP2 Server Push can create a super fast perceived performance, when applied correctly. More on this later.
+
+[![HTTP2 Waterfall demo on WebPagetest](/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/http1-vs-http2-webpagetest-wpt-waterfall-difference.png)](/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/http1-vs-http2-webpagetest-wpt-waterfall-difference.png) Multiplexing has a curious side-effect when it comes to image loading: certain kinds of images load significantly faster in terms of perceived performance because initial image information can be downloaded in parallel via HTTP2 Multiplexing. Progressive JPEGs and interlaced PNGs benefit from this.
+
+## Progressive All The Things
+
+![Baseline sequential image loading example](/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/baseline-sequential-jpeg-loading-animation.gif)
+
+![Progressive JPEG image loading example](/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/progressive-jpeg-loading-animation.gif)
+
+Progressive and interlaced images are like layer cake: they contain information not in a single stream that renders images from top left to bottom right, but as a stack of layers, each improving on information already shipped in earlier layers. Each individual layer is more lightweight in terms of byte size than the final image.
+
+Since browsers loading website assets via HTTP2 Multiplexing will initiate almost all image downloads simultaneously, the initial, lightweight layers of progressive and interlaced images start rendering much more quickly than sequentially encoded images. Sequentially encoded images render in a windowblind manner: line by line until all image information has been shipped.
+
+[![John Mellor's SPDY test demo](/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/pJPEG-on-SPDY-John-Melor-Google.png)](/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/pJPEG-on-SPDY-John-Melor-Google.png) That perceived performance and the Speed Index benefit from delivering progressive JPEG scan layers via HTTP2 Multiplexing was already observed [by Google’s John Mellor in 2012.](https://yoavweiss.github.io/respimg-blinkon-presentation/#/71/2) He was experimenting with the [SPDY](https://www.chromium.org/spdy) protocol, a precursor to HTTP2\. Today, we can improve on this discovery to make progressive images appear even faster:
+
+## Take The Power Back! Or: The Scans File
+
+[![Demo of 10 scan layers](/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/progressive-jpeg-ALL-scan-levels-rhine-river.jpg)](/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/progressive-jpeg-ALL-scan-levels-rhine-river.jpg) Progressively encoded JPEGs contain ten scan layers by default. That means ten iterative layers of image information build on each other to deliver the final visual quality of the image. The first visible scan layer of a progressive JPEG is always highly pixelated and often black & white because it saves on color channel information. If you want to check out how each scan layer looks, [use Frédéric Kayser’s “jsk” tool to split a progressive JPEG into its individual scan layers](http://encode.ru/threads/1800-JSK-JPEG-Scan-Killer-progressive-JPEG-explained-in-slowmo).
+
+Why ten layers? That’s the default setting inside all common JPEG encoders. It’s a compromise between byte size per scan layer, visual quality and helping the JPEG encoder achieve smaller total image file sizes [during Huffman table optimizations](https://en.wikipedia.org/wiki/JPEG#Entropy_coding).
+
+[![Default scan layers script](/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/progressive-jpeg-scan-level-wizard-file-script-default-highlights-commented.png)](/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/progressive-jpeg-scan-level-wizard-file-script-default-highlights-commented.png) Unlike PNGs, which use a fixed method [called Adam7 encoding](https://en.wikipedia.org/wiki/Adam7_algorithm) to create interlaced layers, we can supplement JPEG encoders with custom directives for scan layer creation: the “-scans” flag for JPEG encoders. You can use it like this with mozjpeg: “cjpeg -quality 75 -scans customscans.txt -outfile output.jpg input.jpg”. Now the JPEG encoder accepts [a plaintext file containing your custom commands for scan layer creation](/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/scans.txt).
+
+Each line in the scans file defines a new scan layer. They contain multiple parts of information on color channel, matrix index and lossiness.
+
+The three channels are brightness (‘Y’), blue (‘Cb’) and red (‘Cr’), which respectively have the numbers 0,1 & 2 in the scans file. The matrix index in the scan file goes from 0 to 63, covering a 64-pixel block. (JPEG encoding has a native 8×8 block setting.)
+
+## Getting Creative
+
+[![Custom scan layers script](/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/optimized-progressive-jpeg-scan-levels-wizard-file-script-annotated.png)](/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/optimized-progressive-jpeg-scan-levels-wizard-file-script-annotated.png) Our goal is to show meaningful image contents sooner while enabling browsers to lay out the site speedily. Our initial scan layer should therefore be lean but meaningful, followed by an as steep increase in perceived visual quality as possible.
+
+The custom scans file displayed here ensures a first scan layer with appropriate colors. At the second scan layer, we already have a highly acceptable preview. Scan layers three and four deliver the necessary color information: the red channel before blue channel since it is likely that red color information is more important to improve visuals, e.g. when showing faces. After the fourth scan layer, the image looks complete and the final fifth scan layer improves only fine high frequency details. These improvements are reflected in an ~6% better Speed Index, reflecting the perceived performance.
+
+[![WebPagetest results](/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/http2-pJPEG-vs-opJPEG-table-timing-wpt-webpagetest-results-annotated.png)](/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/http2-pJPEG-vs-opJPEG-table-timing-wpt-webpagetest-results-annotated.png)
+
+[![Progressive JPEG image loading example](/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/http2-pJPEG-vs-opJPEG-wpt-webpagetest-results-visual-progress.png)](/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/http2-pJPEG-vs-opJPEG-wpt-webpagetest-results-visual-progress.png)
+
+The above scans script is only one example of what is possible when customizing progressive JPEG encoding: using the same approach, you could recreate [Guy Podjarny’s LQIP technique](http://www.guypo.com/introducing-lqip-low-quality-image-placeholders/) within progressive JPEGs [as shown by Jon Sneyers](http://cloudinary.com/blog/progressive_jpegs_and_green_martians).
+
+## Push! Push! Push!
+
+HTTP2 offers another tool we may use for even faster delivery of image contents: Server Push. [In supporting HTTP2-enabled web servers](https://www.shimmercat.com/), it is possible to flag individual scan layers of progressive JPEGs with high priority and making the server push those scan layers into [the client browsers’ Push cache](https://calendar.perfplanet.com/2016/a-tale-of-four-caches/) even before the request for the respective image is initiated. Browsers then can lay out the page and render initial scan layers with the performance of a warmed cache, making users perceive the site’s images as rendering exceptionally fast.
+
+Check out [this brilliant article in this year’s Performance Advent Calendar](https://calendar.perfplanet.com/2016/http2-push-the-details/) to find out more about HTTP2 Server Push.
+
+[![WebPagetest results](/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/wpt-webpagetest-4way-comparison-ServerPush-HTTP2-Sequential-vs-pJPEG-vs-OpJPEG-vs-ServerPush-tables-Firefox.png)](/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/wpt-webpagetest-4way-comparison-ServerPush-HTTP2-Sequential-vs-pJPEG-vs-OpJPEG-vs-ServerPush-tables-Firefox.png)
+
+[![Progressive JPEG image loading example](/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/wpt-webpagetest-4way-comparison-ServerPush-HTTP2-Sequential-vs-pJPEG-vs-OpJPEG-vs-ServerPush-Visual-Progress-Graph-Firefox.png)](/content/1-blogging/7-even-faster-images-using-http2-and-progressive-jpegs/wpt-webpagetest-4way-comparison-ServerPush-HTTP2-Sequential-vs-pJPEG-vs-OpJPEG-vs-ServerPush-Visual-Progress-Graph-Firefox.png)
+
+This technique should only be used strategically: find out which images are crucial for creating user engagement on your page, e.g. an emotion-evoking hero image or a product overview image, and only apply Server Push to the initial scan layers of those JPEG images. This will enable you to increase user engagement and thus successful conversions without harming overall site asset downloads.
+
+## Takeaways
+
+* Multiple progressive or interlaced images render faster on HTTP2 thanks to Multiplexing
+* Taking control of progressive JPEG creation may give users a better visual experience
+* HTTP2 Server Push can increase perceived performance for important images
+
+**Credits:** Thanks to [Corinna Baldauf](http://finding-marbles.com/) for proof & editing. Thanks to [Colin Bendell](http://twitter.com/colinbendell) and [Yoav Weiss](https://blog.yoav.ws/) for inspiration & support.

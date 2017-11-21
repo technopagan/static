@@ -1,0 +1,21 @@
+stan-optim-sc.tobias.is:443 {
+        tls cert.crt cert.key
+        header / Cache-Control "no-cache, no-store, must-revalidate"
+        header / Pragma "no-cache, no-store"
+        gzip
+        root /var/www/tobias.is/nifty/stan/optim-sc
+}
+stan-optim.tobias.is:443 {
+        tls cert.crt cert.key
+        header / Cache-Control "no-cache, no-store, must-revalidate"
+        header / Pragma "no-cache, no-store"
+        gzip
+        root /var/www/tobias.is/nifty/stan/optim
+}
+stan-orig.tobias.is:443 {
+        tls cert.crt cert.key
+        header / Cache-Control "no-cache, no-store, must-revalidate"
+        header / Pragma "no-cache, no-store"
+        gzip
+        root /var/www/tobias.is/nifty/stan/orig
+}

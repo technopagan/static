@@ -1,0 +1,27 @@
+Title: Progressive JPEG performance optimization
+
+----
+
+Text:
+
+A side by side comparison of jpegtran & jpegrescan: how to efficiently compress lossless progressive JPEGs in the light of (link: http://calendar.perfplanet.com/2012/progressive-jpegs-a-new-best-practice/ text: progressive JPEGs being a better pick for UX & their advantages on mobile connections), the fact that (link: http://blog.patrickmeenan.com/2013/06/progressive-jpegs-ftw.html text: WebPagetest now urges you to deliver progressive JPEGs) because only (link: https://twitter.com/tbaldauf/status/342898788735803392 text: ~7% of all JPEGs on the web are progressive) and image bytesize being The New Black in the (link: http://timkadlec.com/2013/06/why-we-need-responsive-images/ text: context of responsive images).
+
+(link: http://en.wikipedia.org/wiki/Libjpeg text: JPEGtran) is a well-known part of libjpeg and thus available in most *nix systems. It is used to optimize (link: http://en.wikipedia.org/wiki/Huffman_coding text: Huffman tables), strip meta-data and make JPEGs progressive. (link: http://github.com/kud/jpegrescan text: JPEGrescan), originally written by Lorren Merritt of x264 and now also a part of (link: http://imageoptim.com/ text: ImageOptim), is a Perl script that uses JPEGtran at its core, but feeds alternating (link: http://svn.ghostscript.com/ghostscript/tags/jpeg-7/wizard.txt text: scan sequence numbers to the progressive JPEG creation) process in order to find the smallest possible bytesize. Thus, it's safe to say that JPEGrescan extends lossless JPEG compression functionality much the same way as (link: http://github.com/technopagan/adept-jpg-compressor text: Adept extends lossy JPEG compression functionality).
+
+To test the validity of the hypothesis that JPEGrescan enables us to achieve superior results in lossless JPEG compression, (link: http://github.com/technopagan/adept-jpg-compressor/blob/master/imagesampler.sh text: I created a sample of 32.767 random JPEGs) publicly available on websites indexed by (link: http://httparchive.org/ text: HTTP Archive). If you're looking to recreate this exact sample, (link: http://assets.tobias.is/image_urls_sample.txt text: have a look at this file which contains the entire set of image URLs) used by curl to retrieve the images.
+
+After creating this sample of ~754MB in total bytesize, I ran JPEGtran & JPEGrescan on the source sample, taking care to use identical switches as JPEGrescan has some switches for JPEGtran hardcoded:
+
+jpegtran -copy none -optimize -progressive -outfile $outfile $infile
+jpegrescan -q -s $infile $outfile
+
+Afterwards, I calculated the total bytesize of the respective outputs: 634MB for JPEGtran and 626MB for JPEGrescan. In relative terms this translates to 1.2% bytesize savings using JPEGrescan over JPEGtran.
+JPEGrescan compresses progressive JPEGs 1.2% more efficiently than vanilla JPEGtran
+
+Be aware, however, that it does not mean savings of 120MB alone by using JPEGtran on the source sample as the source contains partially defective JPEGS and files marked as .jpg which aren't JPEGs at all. Both JPEGtran and JPEGrescan threw errors iterating on these files and thus did not save them in their ouput directories. The sum of all sucessfully processed JPEGs from the 32767 images source sample was 28320. Thus, it is safe to compare the results of JPEGtran to those of JPEGrescan & vice versa, but it is not safe to compare any of the two results to the source sample.
+
+As JPEGrescan is a Perl script, which prevents people on managed or shared hosting environments to make use of it and as it lacks a maintainer, I will rewrite the core functionality of JPEGrescan, namely testing scan sequence numbers during progressive JPEG creation for optimal bytesize results, in PHP to resolve these issues.
+
+----
+
+Date: 2013-06-12
