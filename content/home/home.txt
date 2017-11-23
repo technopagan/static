@@ -4,5 +4,5 @@ Title: Well hello!
 
 Text: 
 
-I'm **Tobias Baldauf**, (link: http://where.tobias.is/ text: web performance evangelist), team lead and (link: https://twitter.com/hashtag/PerfMatters?src=has text: #perfmatters) engineer at (link: http://tech.trivago.com/ text: trivago), dedicated dad, mindful veggy, music lover and curious geek.
-(link: http://who.tobias.is/ text: There's more about me →)
+I'm **Tobias Baldauf**, (link: https://where.tobias.is/ text: web performance evangelist), team lead and (link: https://twitter.com/hashtag/PerfMatters?src=has text: #perfmatters) engineer at (link: http://tech.trivago.com/ text: trivago), dedicated dad, mindful veggy, music lover and curious geek.
+(link: https://who.tobias.is/ text: There's more about me →)
