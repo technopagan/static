@@ -4,7 +4,7 @@ Title: About
 
 Text: 
 
-(image: tobias-baldauf-20161214.jpg alt: Portrait of Tobias Baldauf class: floated_left)
+(image: tobias-baldauf-avatar-madeira-clean.jpg alt: Portrait of Tobias Baldauf class: floated_left)
 
 Hi! I'm **Tobias Baldauf**, (link: http://where.tobias.is/ text: web performance evangelist), (link: https://twitter.com/hashtag/PerfMatters?src=has text: #perfmatters) engineer at (link: http://tech.trivago.com/ text: Trivago), dedicated dad, mindful veggy, music lover and curious geek.
 
