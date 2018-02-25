@@ -1,0 +1,25 @@
+Title: Fight phone addiction with iOS Restrictions
+
+---- 
+
+Date: 2018-02-15
+
+---- 
+
+Text:
+
+I'm picking up my mobile device too often. I lose myself browsing, pulling to refresh. I spend too much money on apps and media. Conscious choices are harder on mobile platforms. Companies work to remove all friction. But friction can be a good thing.
+
+Consciously injecting friction into behavioral patterns can be a great way to change them. [James Clear advises us in his talk "1% Better Every Day"](https://www.youtube.com/watch?v=mNeXuCYiE0U) to make it easy for ourselves to do the things we want and make it difficult for ourselves to keep doing the things we want to get rid of.
+
+In this spirit, I've realized that it is too easy for me to browse mindlessly and spend money on my mobile device. To counter this, I now make use of parental control settings on iOS, called "Restrictions".
+
+Using "Restrictions", available under the "General" section of the iOS settings, I've disabled the ability to buy media in the iTunes & iBooks stores. I've also disabled the app store and in-app purchases. To complete the desired increase in friction, I've deleted my credit card information, stored at Apple ID on the top of the settings menu under "Payment & Shipping".
+
+These restrictions prevent impulse purchases and app store spending sprees. To counteract mindless browsing, I've disabled Safari. That means that links in other apps like Mail, Slack or WhatsApp don't open automatically when touched. To follow a link, I need to copy the link to the clipboard, either via context or share menu, and paste it into my new browser of choice: [Firefox Klar](https://itunes.apple.com/app/id1055677337).
+
+This increase in friction for browsing helps me be more mindful about spending my time on the web. But Firefox Klar has more benefits for me: it is a tabless browser, which means I have only one piece of information open at a time. As a consequence, my browsing has become more deliberate and thankfully more linear.
+
+At the end of a browsing session, I consciously press the "Erase" button of Firefox Klar, which deletes session history, caches and cookies. This makes me have a clean slate every time I open the browser. No more 100+ open and often unread tabs for me anymore!
+
+Using these steps to consciously increase friction for myself has stopped me from spending money on apps and media. I have reduced my overall time spent on my mobile device per day, measured using [Moment](https://itunes.apple.com/app/id771541926). I have no more lingering guilt about lots of unread browser tabs. It is a truly liberating feeling that I hope you'll share with me soon.
