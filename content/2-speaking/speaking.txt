@@ -2,7 +2,7 @@ Title: Speaking
 
 ----
 
-Text: I'm a (link: http://who.tobias.is/ text: web performance evangelist &amp; keynote speaker). If you want me to speak, (link: http://tobias.is/speaking/info/ text: please check out my speaker info page).
+Text: I'm a (link: http://who.tobias.is/ text: web performance evangelist &amp; keynote speaker). If you want me to speak, (link: https://tobias.is/speaking/info/ text: please check out my speaker info page).
 
 > "Tobias is one of the best presenters I've ever seen."
 > <cite>– Andrew Heifetz, Manager Technical Education and Enablement Team at Akamai</cite>
@@ -11,11 +11,19 @@ Text: I'm a (link: http://who.tobias.is/ text: web performance evangelist &amp; 
 
 ----
 
-Events: 
+Events:
+
+**10.-11.05.2018**
+(link: https://deltavconf.com/talks#tobias-baldauf text: 25% Faster Hotel Search. Web Performance? - trivago.)
+at (link: https://deltavconf.com/ text: DeltaV Conference 2018 - London)
+
+**20.03.2018**
+(link: https://community.akamai.com/thread/6603-amsterdam-tech-day-2018-march-20th text: Web Performance: monitoring, optimizing & creating a performance culture)
+at (link: https://community.akamai.com/thread/6603-amsterdam-tech-day-2018-march-20th text: Akamai Tech Day 2018 - Amsterdam)
 
 **04.-07.04.2017**
-Keynote (link: http://tobias.is/speaking/# text: Images And Akamai),
-three sessions on (link: http://tobias.is/speaking/# text: Investigating Web Performance Data)<br>and one (link: http://tobias.is/speaking/# text: Image Optimization Deep-Dive)
+Keynote (link: https://tobias.is/speaking/# text: Images And Akamai),
+three sessions on (link: https://tobias.is/speaking/# text: Investigating Web Performance Data)<br>and one (link: https://tobias.is/speaking/# text: Image Optimization Deep-Dive)
 at (link: https://www.akamai.com/us/en/services-support/akamai-university-training.jsp text: Akamai University - Krakow)
 
 **07.-08.11.2016**
@@ -45,7 +53,7 @@ at (link: http://www.devtalks.ro/bucharest text: DevTalks 2016 - Bucharest)
 (link: https://speakerdeck.com/tbaldauf/your-hero-images-need-you-save-the-day-with-http2-image-loading-devtalks-bucharest-2016 text: Slides →) and (link: https://www.youtube.com/watch?v=qULBBBVAFMYw text: Video [23:00] →)
 
 **13.05.2016**
-(link: http://tobias.is/speaking/# text: The Web Experience)
+(link: https://tobias.is/speaking/# text: The Web Experience)
 at (link: http://www.akamai.de/ text: Akamai Tech Day - Munich)
 
 **09.-10.05.2016**
@@ -100,12 +108,12 @@ at (link: http://2015.industryconf.com/ text: IndustryConf 2015 Newcastle)
 (link: http://speakerdeck.com/tbaldauf/advanced-image-compression-techniques-industryconf-2015 text: Slides →) and (link: http://www.youtube.com/watch?v=g6PVY7RsfEw text: Video [26:00] →)
 
 **26.03.2015**
-(link: http://tobias.is/speaking/# text: The Psychology Of Speed)
+(link: https://tobias.is/speaking/# text: The Psychology Of Speed)
 at (link: http://www.akamai.de/ text: Akamai Tech Day - Stockholm)
 (link: http://speakerdeck.com/tbaldauf/the-psychology-of-speed text: Slides →)
 
 **25.03.2015**
-(link: http://tobias.is/speaking/# text: High Performance Images)
+(link: https://tobias.is/speaking/# text: High Performance Images)
 at (link: http://www.meetup.com/Stockholm-Web-Performance-Group/ text: WebPerf Meetup - Stockholm)
 
 **24.03.2015**
@@ -113,7 +121,7 @@ at (link: http://www.meetup.com/Stockholm-Web-Performance-Group/ text: WebPerf M
 at (link: http://www.webbdagarna.se/english text: Webbdagarna 2015 - Stockholm)
 
 **12.03.2015**
-(link: http://tobias.is/speaking/# text: Responsive Webdesign Best Practices)
+(link: https://tobias.is/speaking/# text: Responsive Webdesign Best Practices)
 at (link: http://content.akamai.com/ME1210-RWDWorkshop.html text: Akamai RWD Workshop - Munich)
 
 **05.02.2015**
