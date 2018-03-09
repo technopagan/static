@@ -1,6 +1,6 @@
 /*
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
-  Link: rel=preload; /assets/fonts/sourcesanspro-light.woff2; as=font
+  Link: rel=preload; /assets/fonts/sourcesanspro-light.woff2; as=font; type=font/woff2; crossorigin=anonymous
 /feed/index.xml
   Content-Type: text/xml; charset=UTF-8
