@@ -9,6 +9,31 @@
         <description>Blog posts by Tobias Baldauf as published on https://tobias.is</description>
     
         <item>
+      <title>How &#38; why to check a server's PCONN settings</title>
+      <link>http://tobias.is/blogging/check-server-persistent-connections-pconns-openssl</link>
+      <guid>http://tobias.isblogging/check-server-persistent-connections-pconns-openssl</guid>
+      <pubDate>Sun, 11 Mar 2018 21:07:00 +0100</pubDate>
+      <description><![CDATA[<p>I recently tested various ways of how to check a server's persistent connection settings reliably. Here is the best way how to measure &quot;PCONNs&quot; on HTTPS and also a little background information on why this matters for web performance optimization.</p>
+<p><a href="https://en.wikipedia.org/wiki/HTTP_persistent_connection">Persistent Connections</a> (&quot;PCONNs&quot;) allow a TCP connection between a client and server to be used for more than one HTTP request. The TCP socket remains open for a predefined period of time so that TLS handshake and TCP Slowstart performance penalties can be avoided. This is why <a href="https://www.webpagetest.org/">WebPagetest</a> checks Keep-Alive settings for its web performance grades.</p>
+<p>PCONNs are important for server-to-client communication, but they are also crucial <a href="https://community.akamai.com/thread/1192">when a CDN is in the mix</a>: a CDN's edge node can drastically reduce origin traffic and improve edge-to-origin connection performance if PCONNs are properly configured.</p>
+<p>Checking PCONN settings can be tricky. There are several players involved that might influence the actual PCONN time: a load balancer, a SSL terminator, a Varnish cache, an underlying Apache / NGINX server and even the executed scripting language, such as PHP, may all terminate a connection depending on their configuration.</p>
+<p>On HTTPS, the best way to measure PCONN settings is to make use of &quot;openssl&quot; and &quot;time&quot; commandline tools:</p>
+<pre><code class="language-bash">time openssl s_client -connect tobias.is:443 -crlf</code></pre>
+<p><br>Once the SSL certificate information has been printed to the screen and the cursor is in waiting, paste the following lines into the terminal window to initiate a HTTP GET request. Then press the Enter button 2x and wait for the session to disconnect and the &quot;time&quot; tool to report its measurements:</p>
+<pre><code class="language-bash">GET / HTTP/1.1
+Host: tobias.is
+Connection: keep-Alive</code></pre>
+<p><br>Without initiating the HTTP GET request, you will likely receive false values. You will know that you've done it right when you see the plaintext reply of your HTTP GET request printed in your terminal screen with the command still running.</p>
+<p>After the defined PCONN time has passed, the final terminal output will look like this: </p>
+<pre><code class="language-bash">closed
+      118.91 real         0.00 user         0.00 sys</code></pre>
+<p><br>This output tells us that <a href="https://www.netlify.com/">Netlify</a>, on which <a href="https://tobias.is/">tobias.is</a> is graciously hosted, is using a PCONN setting of ~120 seconds.</p>
+<p>PSA: if you're really lucky, the server you're trying to measure PCONNs for is already priting the desired information in its Keep-Alive HTTP Header:  </p>
+<pre><code class="language-bash">Connection: Keep-Alive
+Keep-Alive: timeout=120</code></pre>
+<p><br>Once you know the current PCONN time of the server, you can go about changing it to a desired value. The way how to change PCONN settings strongly depends on the server stack that you are using and is therefore out of the scope of this article.</p>]]></description>
+    </item>
+        <item>
       <title>Notes from James Clear's &#34;1% Better Every Day&#34;</title>
       <link>http://tobias.is/blogging/better-one-percent-james-clear-notes</link>
       <guid>http://tobias.isblogging/better-one-percent-james-clear-notes</guid>
@@ -232,22 +257,6 @@ jpegrescan -q -s $infile $outfile</p>
 JPEGrescan compresses progressive JPEGs 1.2% more efficiently than vanilla JPEGtran</p>
 <p>Be aware, however, that it does not mean savings of 120MB alone by using JPEGtran on the source sample as the source contains partially defective JPEGS and files marked as .jpg which aren't JPEGs at all. Both JPEGtran and JPEGrescan threw errors iterating on these files and thus did not save them in their ouput directories. The sum of all sucessfully processed JPEGs from the 32767 images source sample was 28320. Thus, it is safe to compare the results of JPEGtran to those of JPEGrescan &amp; vice versa, but it is not safe to compare any of the two results to the source sample.</p>
 <p>As JPEGrescan is a Perl script, which prevents people on managed or shared hosting environments to make use of it and as it lacks a maintainer, I will rewrite the core functionality of JPEGrescan, namely testing scan sequence numbers during progressive JPEG creation for optimal bytesize results, in PHP to resolve these issues.</p>]]></description>
-    </item>
-        <item>
-      <title>To Boldly Monitor What No One Has Monitored Before</title>
-      <link>http://tobias.is/blogging/to-boldly-monitor-what-no-one-has-monitored-before</link>
-      <guid>http://tobias.isblogging/to-boldly-monitor-what-no-one-has-monitored-before</guid>
-      <pubDate>Fri, 14 Dec 2012 00:00:00 +0100</pubDate>
-      <description><![CDATA[<p>In the <a href="http://calendar.perfplanet.com/2012/using-nginx-php-fpmapc-and-varnish-to-make-wordpress-websites-fly/">Performance Advent Calendar I described</a> how to setup a high performance webserver. As a follow-up, let's look into monitoring this setup to automagically restart unresponsive services such as NGINX, PHP5-FPM and Varnish to minimize downtime.</p>
-<p>We'll be <a href="http://mmonit.com/monit/">using Monit on Debian</a> because of its easy syntax. Go ahead and install Monit using your favorite package management tool.</p>
-<p>After successful installation, Monit will tell you that you will need to configure it and then enable it to begin monitoring. Let's do that now: open /etc/monit/monitrc and configure it like this:</p>
-<script src="https://gist.github.com/4286696.js?file=monitrc"></script>
-<p>The nifty bits are how to check for service health: for <a href="http://www.nginx.org/">NGINX</a>, we can simply check to get a static file on port 8080, and for <a href="http://en.wikipedia.org/wiki/Varnish_%28software%29">Varnish</a> on port 80. However, checking for the actual health of PHP can be tricky.</p>
-<p>To monitor the stack's capacity of processing PHP code, we'll enable PHP-FPM's ping path: in your /etc/php5/fpm/pool.d/www.conf uncomment the line ping.path = /ping.</p>
-<p>Next, configure NGINX so that it knows how to handle the new /ping location:</p>
-<script src="https://gist.github.com/4286696.js?file=yourdomain.tld"></script>
-<p>Now, Monit can successfully request '/ping' as long as PHP is up &amp; running.</p>
-<p>If any of the monitored services becomes unavailable, Monit will restart it. Group settings ensure a cascade of NGINX =&gt; PHP-FPM =&gt; Varnish. If a service becomes unresponsive too often, you will be notified by email.</p>]]></description>
     </item>
     
   </channel>

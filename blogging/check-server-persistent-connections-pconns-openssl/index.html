@@ -5,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-  <title>Notes from James Clear's &quot;1% Better Every Day&quot; &ndash; tobias.is</title>
+  <title>How &amp; why to check a server's PCONN settings &ndash; tobias.is</title>
   <meta name="description" content="Blog of Tobias Baldauf, web performance evangelist, perfmatters engineer at Trivago, father, veggy, hiker, music lover and forever curious geek.">
   <link rel="alternate" type="application/rss+xml" title="tobias.is blog" href="/feed/index.xml">
 
@@ -37,45 +37,37 @@
 </nav>  </header>
   <main class="main h-entry" role="main">
 
-    <h1 class="p-name">Notes from James Clear's &quot;1% Better Every Day&quot;</h1>
+    <h1 class="p-name">How &amp; why to check a server's PCONN settings</h1>
 
     <div class="text e-content">
-      <p>I've recently watched <a href="https://www.youtube.com/watch?v=mNeXuCYiE0U">James Clear's talk &quot;1% Better Every Day&quot;</a> multiple times in a row and wrote down notes to capture its essence. Here's a copy of them. May you find them useful on your journey to change your habits and improved well-being.</p>
-<h3>The Notes</h3>
-<ul>
-<li>The key: the &quot;aggregatation of marginal gains&quot;. Continious small improvements have a huge impact.</li>
-<li>Habits are the compound interest of self improvement.</li>
-<li>Each habit has four stages: noticing, wanting, doing &amp; liking.</li>
-<li>On stage no.1 &quot;Noticing&quot;: implementation intention is key! “I will do $w on day $x at time $y at place $z.”</li>
-<li>People don’t lack motivation. Motivational speeches alone don’t improve anything. People lack clarity. Decision making on a good habit must not be dependent on daily form &amp; feelings. The decision to regularly do something - no matter how good or bad it goes at any specific day - and to set a time &amp; place for it is the key. </li>
-<li>Give your goals a space &amp; time to exist: make a time in your calendar for each. </li>
-<li>Use the &quot;Failure PreMortem&quot; technique to discover what’s holding you back to implement a desired habit: “6 months from now, you have failed to reach your desired goal. Write down the story of what happened. What caused you to fail?”. For businesses: the “Kill the company” exercise. Think about ways to kill the company.</li>
-<li>Use the insights from the &quot;Failure PreMortem&quot; exercise to identify potential threats &amp; challenges and think of workarounds to deal with them: “if $x keeps me from executing on my habit on day $y, then I’ll execute the habit on day $z this week instead.”</li>
-<li>On stage no.2 “Wanting”: our physical environment shapes our desires. We can change it to help facilitate our habits. Executing in an environment that is consistently negative for a desired behavior is impossible to do. Examples on how to execute simply &amp; well: Want to read more? Put a book on your pillow. Want to eat healthy fruit? Make them easily available in a bowl on your table. Hate wasting time on your phone? Leave it in the hallway when you come home. </li>
-<li>Nice hack on Social Media addiction: have your social media passwords reset on Monday morning &amp; only get the new ones on Friday evening each week. </li>
-<li>Consciously put an increasing number of steps between you &amp; bad behaviors and vice versa reduce the amount of necessaty steps between you &amp; good behaviors.</li>
-<li>On stage no.3 &quot;Doing&quot;: repetitions matter the most! Don’t waste time on theorizing about the perfect one-time execution of your habit. Rather do it in whatever quality hundreds of times &amp; you’ll automatically get good at it. It's akin to “Ship early, ship often.”</li>
-<li>Learn how to consistently get started with your habit each day to get your repetitions in. </li>
-<li>Technique to get started: 2-Minute rule, adapted from Getting-Things-Done: make sure that your entry into your desired habit is as easy as possible and takes 2 minutes or less. Don’t require a 15min ramp-up to get started. Break down your habit into smaller steps and optimize for step no. 1 being as low-threshold as possible. “Optimize for the starting line, not the finish line”. Don’t waste your time dreaming about finishing a marathon, just get started by running a couple of meters. </li>
-<li>On stage no.4 &quot;Liking&quot;: we only stick with a habit if we like it. Make sure there are rewards for you on the way. </li>
-<li>Many good habits have only delayed rewards like health &amp; fitness etc. but bad habits often have an inbuilt instant gratification &amp; their bad consequences are delayed (sickness etc). So we need to help our good habits along by building in rewards for ourselves. </li>
-<li>“The best way to change long term behavior is with short term feedback.”</li>
-<li>The &quot;Seinfeld Strategy&quot;: “Don’t break the chain.” Map your habit on a calendar &amp; mark each time you executed your habit successfully. Soon, it will become your desire to continue an unbroken chain of repetitions (being on a streak).</li>
-<li>Important addendum to the &quot;Seinfeld Strategy&quot;: Never miss twice. It’s ok to miss once within a streak - that happens to the best professional athletes - but make it your golden rule never to miss out twice. Remember the &quot;Failure PreMortem&quot; strategies for fallbacks so that you get to execute your habit even in adverse situations.</li>
-<li>The more evidence we have for a belief, the more likely we are to believe it: if you provide yourself with enough small pieces of evidence that you can do something, the more likely it becomes that you actually believe it and thus change something about who you are. Actions provide evidence. “Every action you take is a vote for who you want to become.”. The more votes you cast for a certain pattern, the more likely it is to win. True change is identity change. The goal is not to eat an apple, the goal is to become a healthier person.</li>
-<li>Get yourself to believe something new about yourself and forge who you are.</li>
-<li>Change your habits, change your life!</li>
-</ul>
+      <p>I recently tested various ways of how to check a server's persistent connection settings reliably. Here is the best way how to measure &quot;PCONNs&quot; on HTTPS and also a little background information on why this matters for web performance optimization.</p>
+<p><a href="https://en.wikipedia.org/wiki/HTTP_persistent_connection">Persistent Connections</a> (&quot;PCONNs&quot;) allow a TCP connection between a client and server to be used for more than one HTTP request. The TCP socket remains open for a predefined period of time so that TLS handshake and TCP Slowstart performance penalties can be avoided. This is why <a href="https://www.webpagetest.org/">WebPagetest</a> checks Keep-Alive settings for its web performance grades.</p>
+<p>PCONNs are important for server-to-client communication, but they are also crucial <a href="https://community.akamai.com/thread/1192">when a CDN is in the mix</a>: a CDN's edge node can drastically reduce origin traffic and improve edge-to-origin connection performance if PCONNs are properly configured.</p>
+<p>Checking PCONN settings can be tricky. There are several players involved that might influence the actual PCONN time: a load balancer, a SSL terminator, a Varnish cache, an underlying Apache / NGINX server and even the executed scripting language, such as PHP, may all terminate a connection depending on their configuration.</p>
+<p>On HTTPS, the best way to measure PCONN settings is to make use of &quot;openssl&quot; and &quot;time&quot; commandline tools:</p>
+<pre><code class="language-bash">time openssl s_client -connect tobias.is:443 -crlf</code></pre>
+<p><br>Once the SSL certificate information has been printed to the screen and the cursor is in waiting, paste the following lines into the terminal window to initiate a HTTP GET request. Then press the Enter button 2x and wait for the session to disconnect and the &quot;time&quot; tool to report its measurements:</p>
+<pre><code class="language-bash">GET / HTTP/1.1
+Host: tobias.is
+Connection: keep-Alive</code></pre>
+<p><br>Without initiating the HTTP GET request, you will likely receive false values. You will know that you've done it right when you see the plaintext reply of your HTTP GET request printed in your terminal screen with the command still running.</p>
+<p>After the defined PCONN time has passed, the final terminal output will look like this: </p>
+<pre><code class="language-bash">closed
+      118.91 real         0.00 user         0.00 sys</code></pre>
+<p><br>This output tells us that <a href="https://www.netlify.com/">Netlify</a>, on which <a href="https://tobias.is/">tobias.is</a> is graciously hosted, is using a PCONN setting of ~120 seconds.</p>
+<p>PSA: if you're really lucky, the server you're trying to measure PCONNs for is already priting the desired information in its Keep-Alive HTTP Header:  </p>
+<pre><code class="language-bash">Connection: Keep-Alive
+Keep-Alive: timeout=120</code></pre>
+<p><br>Once you know the current PCONN time of the server, you can go about changing it to a desired value. The way how to change PCONN settings strongly depends on the server stack that you are using and is therefore out of the scope of this article.</p>
                       <figure>
-          <img src="/content/1-blogging/11-better-one-percent-james-clear-notes/james-clear.jpg" alt="Notes from James Clear's &quot;1% Better Every Day&quot;">
+          <img src="/content/1-blogging/12-check-server-persistent-connections-pconns-openssl/pconns.png" alt="How &amp; why to check a server's PCONN settings">
         </figure>
               
     </div>
 
     <nav class="nextprev cf" role="navigation">
-            <a class="prev" href="/blogging/fighting-bad-phone-addiction-habits-ios-restrictions">&larr; previous</a>
-                  <a class="next" href="/blogging/check-server-persistent-connections-pconns-openssl">next &rarr;</a>
-          </nav>
+            <a class="prev" href="/blogging/better-one-percent-james-clear-notes">&larr; previous</a>
+                </nav>
 
   </main>
 

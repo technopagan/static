@@ -1,0 +1,43 @@
+Title: How & why to check a server's PCONN settings
+
+---- 
+
+Date: 2018-03-11 21:07
+
+---- 
+
+Text:
+
+I recently tested various ways of how to check a server's persistent connection settings reliably. Here is the best way how to measure "PCONNs" on HTTPS and also a little background information on why this matters for web performance optimization.
+
+[Persistent Connections](https://en.wikipedia.org/wiki/HTTP_persistent_connection) ("PCONNs") allow a TCP connection between a client and server to be used for more than one HTTP request. The TCP socket remains open for a predefined period of time so that TLS handshake and TCP Slowstart performance penalties can be avoided. This is why [WebPagetest](https://www.webpagetest.org/) checks Keep-Alive settings for its web performance grades.
+
+PCONNs are important for server-to-client communication, but they are also crucial [when a CDN is in the mix](https://community.akamai.com/thread/1192): a CDN's edge node can drastically reduce origin traffic and improve edge-to-origin connection performance if PCONNs are properly configured.
+
+Checking PCONN settings can be tricky. There are several players involved that might influence the actual PCONN time: a load balancer, a SSL terminator, a Varnish cache, an underlying Apache / NGINX server and even the executed scripting language, such as PHP, may all terminate a connection depending on their configuration.
+
+On HTTPS, the best way to measure PCONN settings is to make use of "openssl" and "time" commandline tools:
+```bash
+time openssl s_client -connect tobias.is:443 -crlf
+```
+<br>Once the SSL certificate information has been printed to the screen and the cursor is in waiting, paste the following lines into the terminal window to initiate a HTTP GET request. Then press the Enter button 2x and wait for the session to disconnect and the "time" tool to report its measurements:
+```bash
+GET / HTTP/1.1
+Host: tobias.is
+Connection: keep-Alive
+```
+<br>Without initiating the HTTP GET request, you will likely receive false values. You will know that you've done it right when you see the plaintext reply of your HTTP GET request printed in your terminal screen with the command still running.
+
+After the defined PCONN time has passed, the final terminal output will look like this: 
+```bash
+closed
+      118.91 real         0.00 user         0.00 sys
+```
+<br>This output tells us that [Netlify](https://www.netlify.com/), on which [tobias.is](https://tobias.is/) is graciously hosted, is using a PCONN setting of ~120 seconds.
+
+PSA: if you're really lucky, the server you're trying to measure PCONNs for is already priting the desired information in its Keep-Alive HTTP Header:  
+```bash
+Connection: Keep-Alive
+Keep-Alive: timeout=120
+```
+<br>Once you know the current PCONN time of the server, you can go about changing it to a desired value. The way how to change PCONN settings strongly depends on the server stack that you are using and is therefore out of the scope of this article.
