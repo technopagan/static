@@ -49,13 +49,13 @@
 <p><br>Once the SSL certificate information has been printed to the screen and the cursor is in waiting, paste the following lines into the terminal window to initiate a HTTP GET request. Then press the Enter button 2x and wait for the session to disconnect and the &quot;time&quot; tool to report its measurements:</p>
 <pre><code class="language-bash">GET / HTTP/1.1
 Host: tobias.is
-Connection: keep-Alive</code></pre>
-<p><br>Without initiating the HTTP GET request, you will likely receive false values. You will know that you've done it right when you see the plaintext reply of your HTTP GET request printed in your terminal screen with the command still running.</p>
+Connection: Keep-Alive</code></pre>
+<p><br>Without initiating the HTTP GET request, you will likely receive false values because the server may close the connection early if there are no incoming requests. You will know that you've done it right when you see the plaintext reply of your HTTP GET request printed in your terminal screen with the command still running.</p>
 <p>After the defined PCONN time has passed, the final terminal output will look like this: </p>
 <pre><code class="language-bash">closed
       118.91 real         0.00 user         0.00 sys</code></pre>
 <p><br>This output tells us that <a href="https://www.netlify.com/">Netlify</a>, on which <a href="https://tobias.is/">tobias.is</a> is graciously hosted, is using a PCONN setting of ~120 seconds.</p>
-<p>PSA: if you're really lucky, the server you're trying to measure PCONNs for is already priting the desired information in its Keep-Alive HTTP Header:  </p>
+<p>PSA: if you're really lucky, the server you're trying to measure PCONNs for is already printing the desired information in its Keep-Alive HTTP Header:  </p>
 <pre><code class="language-bash">Connection: Keep-Alive
 Keep-Alive: timeout=120</code></pre>
 <p><br>Once you know the current PCONN time of the server, you can go about changing it to a desired value. The way how to change PCONN settings strongly depends on the server stack that you are using and is therefore out of the scope of this article.</p>

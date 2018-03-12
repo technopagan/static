@@ -24,9 +24,9 @@ time openssl s_client -connect tobias.is:443 -crlf
 ```bash
 GET / HTTP/1.1
 Host: tobias.is
-Connection: keep-Alive
+Connection: Keep-Alive
 ```
-<br>Without initiating the HTTP GET request, you will likely receive false values. You will know that you've done it right when you see the plaintext reply of your HTTP GET request printed in your terminal screen with the command still running.
+<br>Without initiating the HTTP GET request, you will likely receive false values because the server may close the connection early if there are no incoming requests. You will know that you've done it right when you see the plaintext reply of your HTTP GET request printed in your terminal screen with the command still running.
 
 After the defined PCONN time has passed, the final terminal output will look like this: 
 ```bash
@@ -35,7 +35,7 @@ closed
 ```
 <br>This output tells us that [Netlify](https://www.netlify.com/), on which [tobias.is](https://tobias.is/) is graciously hosted, is using a PCONN setting of ~120 seconds.
 
-PSA: if you're really lucky, the server you're trying to measure PCONNs for is already priting the desired information in its Keep-Alive HTTP Header:  
+PSA: if you're really lucky, the server you're trying to measure PCONNs for is already printing the desired information in its Keep-Alive HTTP Header:  
 ```bash
 Connection: Keep-Alive
 Keep-Alive: timeout=120
