@@ -20,6 +20,7 @@ at (link: https://deltavconf.com/ text: DeltaV Conference 2018 - London)
 **12.04.2018**
 (link: https://www.anymeeting.com/AccountManager/RegEv.aspx?PIID=ED54D78586463C text: Web Performance Webinar)
 at (link: https://deltavconf.com/ text: DeltaV Conference 2018 - London)
+(link: https://www.youtube.com/watch?v=VamKs0HKvQA text: Video [45:00] →)
 
 **20.03.2018**
 (link: https://community.akamai.com/thread/6603-amsterdam-tech-day-2018-march-20th text: Web Performance: monitoring, optimizing & creating a performance culture)
