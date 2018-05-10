@@ -1,0 +1,27 @@
+Title: Web Performance Budgets are more than mere thresholds
+
+---- 
+
+Date: 2018-05-10 15:11
+
+---- 
+
+Text:
+
+## Or: How I learned to love the bottom line.
+
+Web Performance budgets help us prioritize features and facilitate discussions on truly important features for our users. Often, they don't get the chance to mature and leave their infancy as thresholds with alerts.
+
+Web performance is a key feature of any product that exists on the web. Yet, when using web performance budgets only as thresholds with alerts, the discussion when an alert is triggered only revolves around what is being lost due to the measured performance deterioration. Often, engineers find themselves in the uncomfortable position of having to discuss the value of a newly released feature with Product Managers as they try to stay in the boundaries of a fixed web performance budget.
+
+This usage of web performance budgets as fixed thresholds with alerts misses the point of a budget: per definition a budget is something that is consciously spent. In this context, web performance is not a fixed threshold forbidden to be crossed, but a currency that can be spent & traded. But why & on what would we spent our product's good web performance that we've worked hard for?
+
+One of the key areas we can consciously choose to spend web performance on is feature development: ideally, our product continuously hones its features (without changing its core) to best help our users achieve their goals frictionlessly. A new feature might excite new users or help retain existing users. 
+
+Learning which features will help to onboard more new users or increase the loyalty of our existing users can be more beneficial to the success of our product than rigorously sticking to fixed web performance thresholds with alerts. To weigh these options against each other, we need to start thinking about increases / decreases in revenue and user experience.
+
+If a feature improvement increases conversions or the loyalty of our users, its impact on the bottom line can outweigh the potential loss in conversions or user loyalty that might be caused by a decrease in web performance, which in turn often has its origin in an increased Javascript or CSS bundle size to support this new feature.
+
+As we come to understand that web performance metrics shouldn't exist as vanity metrics outside of the context of business KPIs, conversations around web performance budgets should be a collaborative effort about the right factors to create an equation to help the business make the right decisions and generate necessary insights to move its product forward. This is far more fruitful than a potentially antagonizing conversation about sticking to a fixed web performance threshold.
+
+In this fashion, web performance budgets leave their immaturity as blockers to feature development and happily co-exist with rapid release cycles and multivariate testing environments.

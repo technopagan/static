@@ -5,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-  <title>Blogging &ndash; tobias.is</title>
+  <title>Web Performance Budgets are more than mere thresholds &ndash; tobias.is</title>
   <meta name="description" content="Blog of Tobias Baldauf, web performance evangelist, perfmatters engineer at Trivago, father, veggy, hiker, music lover and forever curious geek.">
   <link rel="alternate" type="application/rss+xml" title="tobias.is blog" href="/feed/index.xml">
 
@@ -35,42 +35,30 @@
       </ul>
 
 </nav>  </header>
-  <main class="main text" role="main">
+  <main class="main h-entry" role="main">
 
-    <h2>Blogging</h2>
-    <p>I enjoy writing about web performance, front end engineering and many geeky things but also on the love of sounds, music and life.</p>
-    <hr>
+    <h1 class="p-name">Web Performance Budgets are more than mere thresholds</h1>
 
-                      <h3><a href="/blogging/web-performance-budgets-as-currency">Web Performance Budgets are more than mere thresholds</a></h3>
-                    <a href="/blogging/web-performance-budgets-as-currency">
-            <img src="/content/1-blogging/13-web-performance-budgets-as-currency/web-performance-budget-builder.jpg" alt="Web Performance Budgets are more than mere thresholds" >
-          </a>
-                    <p class="blogteaser">Or: How I learned to love the bottom line. Web Performance budgets help us prioritize features and facilitate discussions on truly important features for our users. Often, they don't get the chance to mature and leave their infancy as thresholds with alerts. ... <a href="/blogging/web-performance-budgets-as-currency">read&nbsp;more&nbsp;→</a></p>
-                  <h3><a href="/blogging/check-server-persistent-connections-pconns-openssl">How &amp; why to check a server's PCONN settings</a></h3>
-                    <a href="/blogging/check-server-persistent-connections-pconns-openssl">
-            <img src="/content/1-blogging/12-check-server-persistent-connections-pconns-openssl/pconns.png" alt="How &amp; why to check a server's PCONN settings" >
-          </a>
-                    <p class="blogteaser">I recently tested various ways of how to check a server's persistent connection settings reliably. Here is the best way how to measure &quot;PCONNs&quot; on HTTPS and also a little background information on why this matters for web performance optimization. ... <a href="/blogging/check-server-persistent-connections-pconns-openssl">read&nbsp;more&nbsp;→</a></p>
-                  <h3><a href="/blogging/better-one-percent-james-clear-notes">Notes from James Clear's &quot;1% Better Every Day&quot;</a></h3>
-                    <a href="/blogging/better-one-percent-james-clear-notes">
-            <img src="/content/1-blogging/11-better-one-percent-james-clear-notes/james-clear.jpg" alt="Notes from James Clear's &quot;1% Better Every Day&quot;" >
-          </a>
-                    <p class="blogteaser">I've recently watched James Clear's talk &quot;1% Better Every Day&quot; multiple times in a row and wrote down notes to capture its essence. Here's a copy of them. May you find them useful on your journey to change your habits and ... <a href="/blogging/better-one-percent-james-clear-notes">read&nbsp;more&nbsp;→</a></p>
-                  <h3><a href="/blogging/fighting-bad-phone-addiction-habits-ios-restrictions">Fight phone addiction with iOS Restrictions</a></h3>
-                    <a href="/blogging/fighting-bad-phone-addiction-habits-ios-restrictions">
-            <img src="/content/1-blogging/10-fighting-bad-phone-addiction-habits-ios-restrictions/image001.jpg" alt="Fight phone addiction with iOS Restrictions" >
-          </a>
-                    <p class="blogteaser">I'm picking up my mobile device too often. I lose myself browsing, pulling to refresh. I spend too much money on apps and media. Conscious choices are harder on mobile platforms. Companies work to remove all friction. But friction can be a ... <a href="/blogging/fighting-bad-phone-addiction-habits-ios-restrictions">read&nbsp;more&nbsp;→</a></p>
-                  <h3><a href="/blogging/photo-series-madeira">Ilha da Madeira - Photo Series</a></h3>
-                    <a href="/blogging/photo-series-madeira">
-            <img src="/content/1-blogging/9-photo-series-madeira/image-001.jpg" alt="Ilha da Madeira - Photo Series" >
-          </a>
-                    <p class="blogteaser">We spent quite some time on the incredible island of Madeira. I took a lot of photos during hikes, trail running and exploring. Here are some of my favorites, showing the island's and ocean's beauty. <a href="/blogging/photo-series-madeira">read&nbsp;more&nbsp;→</a></p>
-        
-                  <nav class="pagination">
-                    <a href="/blogging/blog_archive">&nbsp;List&nbsp;all&nbsp;blog&nbsp;posts→</a>
-          </nav>
-        
+    <div class="text e-content">
+      <h2>Or: How I learned to love the bottom line.</h2>
+<p>Web Performance budgets help us prioritize features and facilitate discussions on truly important features for our users. Often, they don't get the chance to mature and leave their infancy as thresholds with alerts.</p>
+<p>Web performance is a key feature of any product that exists on the web. Yet, when using web performance budgets only as thresholds with alerts, the discussion when an alert is triggered only revolves around what is being lost due to the measured performance deterioration. Often, engineers find themselves in the uncomfortable position of having to discuss the value of a newly released feature with Product Managers as they try to stay in the boundaries of a fixed web performance budget.</p>
+<p>This usage of web performance budgets as fixed thresholds with alerts misses the point of a budget: per definition a budget is something that is consciously spent. In this context, web performance is not a fixed threshold forbidden to be crossed, but a currency that can be spent &amp; traded. But why &amp; on what would we spent our product's good web performance that we've worked hard for?</p>
+<p>One of the key areas we can consciously choose to spend web performance on is feature development: ideally, our product continuously hones its features (without changing its core) to best help our users achieve their goals frictionlessly. A new feature might excite new users or help retain existing users. </p>
+<p>Learning which features will help to onboard more new users or increase the loyalty of our existing users can be more beneficial to the success of our product than rigorously sticking to fixed web performance thresholds with alerts. To weigh these options against each other, we need to start thinking about increases / decreases in revenue and user experience.</p>
+<p>If a feature improvement increases conversions or the loyalty of our users, its impact on the bottom line can outweigh the potential loss in conversions or user loyalty that might be caused by a decrease in web performance, which in turn often has its origin in an increased Javascript or CSS bundle size to support this new feature.</p>
+<p>As we come to understand that web performance metrics shouldn't exist as vanity metrics outside of the context of business KPIs, conversations around web performance budgets should be a collaborative effort about the right factors to create an equation to help the business make the right decisions and generate necessary insights to move its product forward. This is far more fruitful than a potentially antagonizing conversation about sticking to a fixed web performance threshold.</p>
+<p>In this fashion, web performance budgets leave their immaturity as blockers to feature development and happily co-exist with rapid release cycles and multivariate testing environments.</p>
+                      <figure>
+          <img src="/content/1-blogging/13-web-performance-budgets-as-currency/web-performance-budget-builder.jpg" alt="Web Performance Budgets are more than mere thresholds">
+        </figure>
+              
+    </div>
+
+    <nav class="nextprev cf" role="navigation">
+            <a class="prev" href="/blogging/check-server-persistent-connections-pconns-openssl">&larr; previous</a>
+                </nav>
+
   </main>
 
   <footer class="footer cf" role="contentinfo">

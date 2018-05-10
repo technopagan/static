@@ -9,6 +9,21 @@
         <description>Blog posts by Tobias Baldauf as published on https://tobias.is</description>
     
         <item>
+      <title>Web Performance Budgets are more than mere thresholds</title>
+      <link>http://tobias.is/blogging/web-performance-budgets-as-currency</link>
+      <guid>http://tobias.isblogging/web-performance-budgets-as-currency</guid>
+      <pubDate>Thu, 10 May 2018 15:11:00 +0200</pubDate>
+      <description><![CDATA[<h2>Or: How I learned to love the bottom line.</h2>
+<p>Web Performance budgets help us prioritize features and facilitate discussions on truly important features for our users. Often, they don't get the chance to mature and leave their infancy as thresholds with alerts.</p>
+<p>Web performance is a key feature of any product that exists on the web. Yet, when using web performance budgets only as thresholds with alerts, the discussion when an alert is triggered only revolves around what is being lost due to the measured performance deterioration. Often, engineers find themselves in the uncomfortable position of having to discuss the value of a newly released feature with Product Managers as they try to stay in the boundaries of a fixed web performance budget.</p>
+<p>This usage of web performance budgets as fixed thresholds with alerts misses the point of a budget: per definition a budget is something that is consciously spent. In this context, web performance is not a fixed threshold forbidden to be crossed, but a currency that can be spent &amp; traded. But why &amp; on what would we spent our product's good web performance that we've worked hard for?</p>
+<p>One of the key areas we can consciously choose to spend web performance on is feature development: ideally, our product continuously hones its features (without changing its core) to best help our users achieve their goals frictionlessly. A new feature might excite new users or help retain existing users. </p>
+<p>Learning which features will help to onboard more new users or increase the loyalty of our existing users can be more beneficial to the success of our product than rigorously sticking to fixed web performance thresholds with alerts. To weigh these options against each other, we need to start thinking about increases / decreases in revenue and user experience.</p>
+<p>If a feature improvement increases conversions or the loyalty of our users, its impact on the bottom line can outweigh the potential loss in conversions or user loyalty that might be caused by a decrease in web performance, which in turn often has its origin in an increased Javascript or CSS bundle size to support this new feature.</p>
+<p>As we come to understand that web performance metrics shouldn't exist as vanity metrics outside of the context of business KPIs, conversations around web performance budgets should be a collaborative effort about the right factors to create an equation to help the business make the right decisions and generate necessary insights to move its product forward. This is far more fruitful than a potentially antagonizing conversation about sticking to a fixed web performance threshold.</p>
+<p>In this fashion, web performance budgets leave their immaturity as blockers to feature development and happily co-exist with rapid release cycles and multivariate testing environments.</p>]]></description>
+    </item>
+        <item>
       <title>How &#38; why to check a server's PCONN settings</title>
       <link>http://tobias.is/blogging/check-server-persistent-connections-pconns-openssl</link>
       <guid>http://tobias.isblogging/check-server-persistent-connections-pconns-openssl</guid>
@@ -241,22 +256,6 @@ tls cert.crt cert.key</code></pre>
 </ul>
 <p>A final tip that's not from my ziploc: if you're comfortable writing MarkDown and working with editors instead of clunky GUIs, a tool like <a href="http://www.decksetapp.com/">DecksetApp</a> enables you to create beautiful slide decks rapidly and in a way that's highly reusable.</p>
 <p>Below you'll find an orderly photo of all the speaking equipment I've listed. Think about what equipment you need before presenting and have contingency plans in place. Be the one thing that conference organizers can always rely upon!</p>]]></description>
-    </item>
-        <item>
-      <title>Progressive JPEG performance optimization</title>
-      <link>http://tobias.is/blogging/progressive-jpeg-performance-optimization</link>
-      <guid>http://tobias.isblogging/progressive-jpeg-performance-optimization</guid>
-      <pubDate>Wed, 12 Jun 2013 00:00:00 +0200</pubDate>
-      <description><![CDATA[<p>A side by side comparison of jpegtran &amp; jpegrescan: how to efficiently compress lossless progressive JPEGs in the light of <a href="http://calendar.perfplanet.com/2012/progressive-jpegs-a-new-best-practice/">progressive JPEGs being a better pick for UX &amp; their advantages on mobile connections</a>, the fact that <a href="http://blog.patrickmeenan.com/2013/06/progressive-jpegs-ftw.html">WebPagetest now urges you to deliver progressive JPEGs</a> because only <a href="https://twitter.com/tbaldauf/status/342898788735803392">~7% of all JPEGs on the web are progressive</a> and image bytesize being The New Black in the <a href="http://timkadlec.com/2013/06/why-we-need-responsive-images/">context of responsive images</a>.</p>
-<p><a href="http://en.wikipedia.org/wiki/Libjpeg">JPEGtran</a> is a well-known part of libjpeg and thus available in most *nix systems. It is used to optimize <a href="http://en.wikipedia.org/wiki/Huffman_coding">Huffman tables</a>, strip meta-data and make JPEGs progressive. <a href="http://github.com/kud/jpegrescan">JPEGrescan</a>, originally written by Lorren Merritt of x264 and now also a part of <a href="http://imageoptim.com/">ImageOptim</a>, is a Perl script that uses JPEGtran at its core, but feeds alternating <a href="http://svn.ghostscript.com/ghostscript/tags/jpeg-7/wizard.txt">scan sequence numbers to the progressive JPEG creation</a> process in order to find the smallest possible bytesize. Thus, it's safe to say that JPEGrescan extends lossless JPEG compression functionality much the same way as <a href="http://github.com/technopagan/adept-jpg-compressor">Adept extends lossy JPEG compression functionality</a>.</p>
-<p>To test the validity of the hypothesis that JPEGrescan enables us to achieve superior results in lossless JPEG compression, <a href="http://github.com/technopagan/adept-jpg-compressor/blob/master/imagesampler.sh">I created a sample of 32.767 random JPEGs</a> publicly available on websites indexed by <a href="http://httparchive.org/">HTTP Archive</a>. If you're looking to recreate this exact sample, <a href="http://assets.tobias.is/image_urls_sample.txt">have a look at this file which contains the entire set of image URLs</a> used by curl to retrieve the images.</p>
-<p>After creating this sample of ~754MB in total bytesize, I ran JPEGtran &amp; JPEGrescan on the source sample, taking care to use identical switches as JPEGrescan has some switches for JPEGtran hardcoded:</p>
-<p>jpegtran -copy none -optimize -progressive -outfile $outfile $infile<br />
-jpegrescan -q -s $infile $outfile</p>
-<p>Afterwards, I calculated the total bytesize of the respective outputs: 634MB for JPEGtran and 626MB for JPEGrescan. In relative terms this translates to 1.2% bytesize savings using JPEGrescan over JPEGtran.<br />
-JPEGrescan compresses progressive JPEGs 1.2% more efficiently than vanilla JPEGtran</p>
-<p>Be aware, however, that it does not mean savings of 120MB alone by using JPEGtran on the source sample as the source contains partially defective JPEGS and files marked as .jpg which aren't JPEGs at all. Both JPEGtran and JPEGrescan threw errors iterating on these files and thus did not save them in their ouput directories. The sum of all sucessfully processed JPEGs from the 32767 images source sample was 28320. Thus, it is safe to compare the results of JPEGtran to those of JPEGrescan &amp; vice versa, but it is not safe to compare any of the two results to the source sample.</p>
-<p>As JPEGrescan is a Perl script, which prevents people on managed or shared hosting environments to make use of it and as it lacks a maintainer, I will rewrite the core functionality of JPEGrescan, namely testing scan sequence numbers during progressive JPEG creation for optimal bytesize results, in PHP to resolve these issues.</p>]]></description>
     </item>
     
   </channel>
