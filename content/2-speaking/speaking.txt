@@ -16,6 +16,7 @@ Events:
 **10.-11.05.2018**
 (link: https://deltavconf.com/talks#tobias-baldauf text: 25% Faster Hotel Search. Web Performance? - trivago.)
 at (link: https://deltavconf.com/ text: DeltaV Conference 2018 - London)
+(link: https://speakerdeck.com/tbaldauf/25-percent-faster-hotel-search-web-performance-trivago text: Slides →)
 
 **12.04.2018**
 (link: https://www.anymeeting.com/AccountManager/RegEv.aspx?PIID=ED54D78586463C text: Web Performance Webinar)
