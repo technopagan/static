@@ -13,6 +13,15 @@ Text: I'm a (link: http://who.tobias.is/ text: web performance evangelist &amp; 
 
 Events:
 
+**19.06.2018**
+(link: # text: text: 25% Faster Hotel Search. Web Performance? - trivago.)
+at (link: # text: Expedia Conf 2018 - London)
+
+**13.06.2018**
+(link: https://www.meetup.com/de-DE/Webworker-NRW/events/250297574/ text: Fake It 'Til You Make It - Prerendering Image Contents For Fun & Profit)
+at (link: https://www.meetup.com/de-DE/Webworker-NRW/events/250297574/ text: WebEngDUS + WWNRW Meetup - Düsseldorf)
+(link: https://speakerdeck.com/tbaldauf/fake-it-til-you-make-it-prerendering-image-contents-for-fun-and-profit text: Slides →)
+
 **10.-11.05.2018**
 (link: https://deltavconf.com/talks#tobias-baldauf text: 25% Faster Hotel Search. Web Performance? - trivago.)
 at (link: https://deltavconf.com/ text: DeltaV Conference 2018 - London)
