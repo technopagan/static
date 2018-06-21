@@ -16,6 +16,7 @@ Events:
 **19.06.2018**
 (link: # text: text: 25% Faster Hotel Search. Web Performance? - trivago.)
 at (link: # text: Expedia Conf 2018 - London)
+(link: https://speakerdeck.com/tbaldauf/25-percent-faster-hotel-search-web-performance-trivago-1 text: Slides →)
 
 **13.06.2018**
 (link: https://www.meetup.com/de-DE/Webworker-NRW/events/250297574/ text: Fake It 'Til You Make It - Prerendering Image Contents For Fun & Profit)
