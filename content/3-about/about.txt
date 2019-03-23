@@ -6,14 +6,14 @@ Text:
 
 (image: tobias-baldauf-avatar-madeira-clean.jpg alt: Portrait of Tobias Baldauf class: floated_left)
 
-Hi! I'm **Tobias Baldauf**, (link: http://where.tobias.is/ text: web performance evangelist), (link: https://twitter.com/hashtag/PerfMatters?src=has text: #perfmatters) engineer at (link: http://tech.trivago.com/ text: Trivago), dedicated dad, mindful veggy, music lover and curious geek.
+Hi! I'm **Tobias Baldauf**, the (link: https://pl.linkedin.com/in/tobiasbaldauf text: Knowledge Lead) for Web Performance at (link: http://tech.trivago.com/ text: trivago) and (link: http://where.tobias.is/ text: web performance evangelist), dedicated dad, mindful veggy, music lover and curious geek.
 
-I create DevOps tools, image optimization algorithms and (link: http://where.tobias.is/ text: speak at conferences.) But don't take my word for it:
+I create DevOps tools, image optimization algorithms and (link: http://where.tobias.is/ text: speak at conferences.) But don't take my word for it:<br><br>
 
 > "Tobias has been leading from the beginning, constantly at the cutting edge of the web performance world. [...] He developed innovative image compression algorithms and optimizations, which have not existed in this form on the market yet. [...] Customers are amazed by his outstanding web performance expert knowledge and are asking to get him involved."
 > <cite>– From laudation by Mike Glöckner (Sr. Manager Service Consulting at Akamai) on Tobias Baldauf receiving the Innovator of the Year award</cite>
 
-In 2015, I received Akamai's "Innovator Of The Year" award and in 2017, my team &amp; me received Akamai's "Industry Knowledge And Thought Leadership" award. Stuff I've invented makes sites like (link: https://codeascraft.com/2017/05/30/reducing-image-file-size-at-etsy/ text: Etsy) &amp; (link: https://www.alibaba.com/ text: Alibaba) faster today. I love (link: http://tobias.is/speaking text: talking about that). Check out my speaker info if you (link: http://tobias.is/speaking/info/ text: want me to speak).
+In 2015, I received Akamai's "Innovator Of The Year" award and in 2017, my team &amp; me received Akamai's "Industry Knowledge And Thought Leadership" award. Stuff I've invented makes sites like (link: https://codeascraft.com/2017/05/30/reducing-image-file-size-at-etsy/ text: Etsy) &amp; (link: https://www.alibaba.com/ text: Alibaba) faster today. I love (link: http://tobias.is/speaking text: talking about that). Check out my speaker info if (link: http://tobias.is/speaking/info/ text: you want me to speak).
 
 
 
