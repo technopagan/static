@@ -13,8 +13,12 @@ Text: I'm a (link: http://who.tobias.is/ text: web performance evangelist &amp; 
 
 Events:
 
+**17.05.2019**
+(link: https://devdays.lt/tobias-baldauf/ text: Image Formats, Performance and Cognitive Load)
+at (link: https://devdays.lt/ text: DevDays Europe 2019 - Vilnius)
+
 **19.06.2018**
-(link: # text: text: 25% Faster Hotel Search. Web Performance? - trivago.)
+(link: # text: 25% Faster Hotel Search. Web Performance? - trivago.)
 at (link: # text: Expedia Conf 2018 - London)
 (link: https://speakerdeck.com/tbaldauf/25-percent-faster-hotel-search-web-performance-trivago-1 text: Slides →)
 
