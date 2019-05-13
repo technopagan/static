@@ -13,7 +13,7 @@ Text: I'm a (link: http://who.tobias.is/ text: web performance evangelist &amp; 
 
 Events:
 
-**17.05.2019**
+**16.05.2019**
 (link: https://devdays.lt/tobias-baldauf/ text: Image Formats, Performance and Cognitive Load)
 at (link: https://devdays.lt/ text: DevDays Europe 2019 - Vilnius)
 
