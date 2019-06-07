@@ -7,7 +7,7 @@ Text: I'm a (link: http://who.tobias.is/ text: web performance evangelist &amp; 
 > "Tobias is one of the best presenters I've ever seen."
 > <cite>– Andrew Heifetz, Manager Technical Education and Enablement Team at Akamai</cite>
 
-<b class="rainbowtext">Please note that due to the current political situation in the USA, I do not accept speaking engagements there at this time. I also prefer local conferences &amp; meetups over events that require air travel.&nbsp;</b>
+<b class="rainbowtext">Please note that due to the current political situation in the USA, I do not accept speaking engagements there at this time. I also prefer local conferences &amp; meetups over events that require air travel.</b>
 
 ----
 
