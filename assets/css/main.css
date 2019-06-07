@@ -300,13 +300,15 @@ h3 a {
 .rainbowtext:before {
     content: "\01F308";
     color: #000;
-    /* needed to reset rainbow gradiant from parent */
+    vertical-align: text-bottom;
+    line-height: .7;
 }
 
 .rainbowtext {
     background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2), color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22));
     background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2), color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22));
     color: transparent;
+    text-shadow: 0 1px 1px #ccc
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-box-decoration-break: clone;
@@ -323,6 +325,8 @@ h3 a {
     -o-transform: scale(-1, 1);
     -ms-transform: scale(-1, 1);
     transform: scale(-1, 1);
+    vertical-align: text-bottom;
+    line-height: .5;
 }
 
 
