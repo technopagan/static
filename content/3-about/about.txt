@@ -4,7 +4,7 @@ Title: About
 
 Text: 
 
-(image: tobias-baldauf-marathon-2019.jpg alt: Photo of Tobias Baldauf class: floated_left)
+(image: tobias-baldauf-avatar-speaking-201905.jpg alt: Photo of Tobias Baldauf class: floated_left)
 
 Hi! I'm **Tobias Baldauf**, the (link: https://pl.linkedin.com/in/tobiasbaldauf text: Knowledge Lead) for Web Performance at (link: https://tech.trivago.com/ text: trivago) and (link: https://where.tobias.is/ text: web performance evangelist), dedicated dad, mindful veggy, music lover and curious geek.
 
