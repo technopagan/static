@@ -17,6 +17,7 @@ Events:
 (link: https://devdays.lt/tobias-baldauf/ text: Image Formats, Performance and Cognitive Load)
 at (link: https://devdays.lt/ text: DevDays Europe 2019 - Vilnius)
 (link: https://speakerdeck.com/tbaldauf/image-formats-performance-and-cognitive-load text: Slides →) and (link: https://www.youtube.com/watch?v=OwiKuX5l9V4 text: Video [37:00] →)
+(link: https://devdays.lt/tobias-baldauf/ text: ★★★★★ [4.5] title: rated by attendees)
 
 **24.01.2019**
 (link: https://www.meetup.com/de-DE/wwruhr/events/257986002/ text: Three Tales From Hotel Web Performance)
